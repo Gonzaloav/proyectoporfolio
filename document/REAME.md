@@ -183,3 +183,15 @@ VISTAS.- Galeria.- (onClick, setView)
          . currentPhoto = 1. 
 
 ---------------------------
+
+Instalaciones.-
+   1. npm install sqlite3 (backend).
+   2. npm install jsonschema (backend).
+   3. npm install react-router-dom (frontend).
+   4. npx create-react-app . (frontend).
+   5. npm init -y (backend).
+   6. npm install express (backend).
+
+   ----------------------------------
+
+   
