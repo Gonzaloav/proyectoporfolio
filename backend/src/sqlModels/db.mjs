@@ -34,8 +34,8 @@ db.run(`
         IF NOT EXISTS
         fotos(
             galeria INTEGER PRIMARY KEY,
-            id INTEGER NOT NULL
-            file VARCHAR (255) NOT NULL,        
+            id INTEGER NOT NULL,
+            file VARCHAR (255) NOT NULL        
         )
 `);
 
