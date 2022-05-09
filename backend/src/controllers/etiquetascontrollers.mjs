@@ -18,7 +18,7 @@ export function postEtiquetasController (request, response) {
     const { id, description, ref, galeria } = request.body;
     db.run(
         `INSERT INTO etiquetas (id, description, ref, galeria) 
-        VALUES (${id}, "${description}", ${ref}, ${galeria}  )`,
+        VALUES (?, ?, ?, ?)` [id, description, ref, galeria ],
         (err)=>{
             if (err) {
                 console.error(err);
