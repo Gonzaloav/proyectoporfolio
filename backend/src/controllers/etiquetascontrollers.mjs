@@ -1,8 +1,8 @@
 
 
-export function getAllTasksController (request, response) {
+export function getAllEtiquetasController (request, response) {
     db.all(
-        `SELECT id, description, done FROM tasks`,
+        `SELECT id, description, ref, galeria FROM etiquetas`,
         (err,data)=>{
             if ( err ) {
                 console.error(err);
@@ -14,22 +14,11 @@ export function getAllTasksController (request, response) {
     )
 }
 
-export function getOneTaskController (request, response) {
-    try {
-        const task = tasks.find(
-            item => item.id === parseInt(request.params.id)
-        )
-        if ( task ) response.json(task)
-        else response.sendStatus(404);
-    } catch (err) {
-        response.sendStatus(400)
-    }
-}
-
-export function postTaskController (request, response) {
-    const { description, done } = request.body;
+export function postEtiquetasController (request, response) {
+    const { id, description, ref, galeria } = request.body;
     db.run(
-        `INSERT INTO tasks(description, done) VALUES ("${description}", ${done})`,
+        `INSERT INTO etiquetas (id, description, ref, galeria) 
+        VALUES (${id}, "${description}", ${ref}, ${galeria}  )`,
         (err)=>{
             if (err) {
                 console.error(err);
@@ -41,19 +30,19 @@ export function postTaskController (request, response) {
     )
 }
 
-export function putTaskController (request, response) {
-    const updatedTask = request.body;
-    const oldTaskIdx = tasks.findIndex(
-        item => item.id === updatedTask.id
+export function putEtiquetasController (request, response) {
+    const updatedEtiquetas = request.body;
+    const oldEtiquetasIdx = etiquetas.findIndex(
+        item => item.id === updatedEtiquetas.id
     )
-    tasks[oldTaskIdx] = updatedTask;
+    etiquetas[oldEtiquetasIdx] = updatedEtiquetas;
     response.sendStatus(200);
 }
 
-export function deleteTaskController (request, response) {
-    const updatedTask = request.body;
-    const oldTaskIdx = tasks.findIndex(
-        item => item.id === updatedTask.id
+export function deleteEtiquetasController (request, response) {
+    const updatedEtiquetas = request.body;
+    const oldEtiquetasIdx = etiquetas.findIndex(
+        item => item.id === updatedEtiquetas.id
     )
     tasks.splice(oldTaskIdx,1);
     response.sendStatus(200)
