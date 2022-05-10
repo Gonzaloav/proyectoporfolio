@@ -7,6 +7,7 @@ const db = new sqlite3.Database('./porfolio.db', (err) => {
     console.log('Conencta el proyecto de tareas con la base de datos');
 });
 
+// tres tablas para porfolio.
 
 db.run(`
     CREATE TABLE
@@ -39,6 +40,17 @@ db.run(`
         )
 `);
 
+// Tabla para Usuarios. 
+
+db.run (`   
+    CREATE TABLE
+        IF NOT EXISTS
+        users(
+            users_id INTEGER PRIMARY KEY,
+            name TEXT NOT NULL,
+            password TEXT NOT NULL
+    )
+`);
 
 
 
