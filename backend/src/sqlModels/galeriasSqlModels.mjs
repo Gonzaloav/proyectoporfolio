@@ -1,8 +1,11 @@
-export const getAllGaleriasSql = `SELECT id, description FROM galerias`;
+export const getAllGaleriasSQL = 
+  `SELECT id_galerias, description FROM galerias WHERE user_id = ?`;
 
-export const postGaleriasSql = `INSERT INTO productos(id, description) VALUES (?,?)`;
+export const postGaleriasSQL = 
+  `INSERT INTO galerias (id_galerias, description) VALUES (?,?)`;
 
-export const putGaleriasSql = `UPDATE galerias SET id = "${request.body.id}"  WHERE id = "${request.body.id}"`;
+export const putGaleriasSQl = 
+  `UPDATE galerias SET description = ? WHERE id_galerias = ? AND user_id = ?`;
 
-export const deleteGaleriasSql =
-  `DELETE FROM galerias WHERE id =` + request.body.id;
+export const deleteGaleriasSQL =
+  `DELETE FROM galerias WHERE id_galerias = ? AND user_id = ?`;

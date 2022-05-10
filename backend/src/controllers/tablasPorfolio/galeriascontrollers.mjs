@@ -1,14 +1,14 @@
 import { db } from "../sqlModels/db.mjs";
 import {
-  getAllGaleriasSql,
-  postGaleriasSql,
-  putGaleriasSql,
-  deleteGaleriasSql,
+  getAllGaleriasSQl,
+  postGaleriasSQl,
+  putGaleriasSQL,
+  deleteGaleriasSQL,
 } from "../sqlModels/fotosSqlModels.mjs";
 
 // Mostrar Galerias
 export function getAllGaleriasController(request, response) {
-  db.all(getAllGaleriasSql, (err, data) => {
+  db.all(getAllGaleriasSQl, (err, data) => {
     if (err) {
       console.error(err);
       response.sendStatus(500);
@@ -20,8 +20,8 @@ export function getAllGaleriasController(request, response) {
 
 // Añadir Galerias
 export function postGaleriasController(request, response) {
-  const { id, description } = request.body;
-  db.run(postGaleriasSql, (err) => {
+  const { id_galeiras, description } = request.body;
+  db.run(postGaleriasSQl, (err) => {
     if (err) {
       console.error(err);
       response.sendStatus(500);
@@ -33,7 +33,7 @@ export function postGaleriasController(request, response) {
 
 // Modificar Galerias
 export function putGaleriasController(request, response) {
-  db.run(putGaleriasSql, (err) => {
+  db.run(putGaleriasSQL, (err) => {
     if (err) {
       console.error(err);
       response.sendStatus(500);
@@ -45,7 +45,7 @@ export function putGaleriasController(request, response) {
 
 // Eliminar Galerias
 export function deleteGaleriasController(request, response) {
-  db.run(putGaleriasSql, (err) => {
+  db.run(deleteGaleriasSQL, (err) => {
     if (err) {
       console.error(err);
       response.sendStatus(500);

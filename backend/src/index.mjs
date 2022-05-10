@@ -16,7 +16,8 @@ import { authMiddleware } from "./middeware/authorization.mjs";
 import { errorsHandler } from "./middeware/errorsHandler.mjs";
 import { application } from "express";
 
-const PATH_FREFIX = "/api/v0.0"
+const PATH_FREFIX = "http://Localhost:3000/api/v0.0/";
+const PORT = 3000;
 
 try { 
     const app = express ();

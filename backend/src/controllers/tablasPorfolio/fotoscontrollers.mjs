@@ -1,14 +1,14 @@
 import { db } from "../sqlModels/db.mjs";
 import {
-  getAllFotosSql,
-  postFotosSql,
-  putFotosSql,
-  deleteFotosSql,
+  getAllFotosSQL,
+  postFotosSQL,
+  putFotosSQL,
+  deleteFotosSQL,
 } from "../sqlModels/fotosSqlModels.mjs";
 
 // Mostar fotos
 export function getAllFotosController(request, response) {
-  db.all(getAllFotosSql, (err, data) => {
+  db.all(getAllFotosSQL, (err, data) => {
     if (err) {
       console.error(err);
       response.sendStatus(500);
@@ -20,8 +20,8 @@ export function getAllFotosController(request, response) {
 
 // Añadir fotos
 export function postFotosController(request, response) {
-  const { id, file, galeria } = request.body;
-  db.run(postFotosSql, (err) => {
+  const { id_fotos, file, galeria } = request.body;
+  db.run(postFotosSQL, (err) => {
     if (err) {
       console.error(err);
       response.sendStatus(500);
@@ -32,7 +32,7 @@ export function postFotosController(request, response) {
 }
 //  Modificar Fotos
 export function putFotosController(request, response) {
-  db.run(putFotosSql, (err) => {
+  db.run(putFotosSQL, (err) => {
     if (err) {
       console.error(err);
       response.sendStatus(500);
@@ -43,8 +43,8 @@ export function putFotosController(request, response) {
 }
 
 // Eliminar fotos
-export function deleteFotosControllers(request, response) {
-  db.run(deleteFotosSql, (err) => {
+export function deleteFotosController(request, response) {
+  db.run(deleteFotosSQL, (err) => {
     if (err) {
       console.error(err);
       response.sendStatus(500);

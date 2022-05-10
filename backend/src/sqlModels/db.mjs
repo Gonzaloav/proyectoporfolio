@@ -13,7 +13,7 @@ db.run(`
         IF NOT EXISTS
        etiquetas (
             galeria INTEGER PRIMARY KEY,
-            id INTEGER NOT NULL,
+            id_etiquetas INTEGER NOT NULL,
             description VARCHAR(255) NOT NULL,
             ref INTEGER NOT NULL     
         )
@@ -24,7 +24,7 @@ db.run(`
     CREATE TABLE
         IF NOT EXISTS
         galerias(
-            id INTEGER PRIMARY KEY,
+            id_galerias INTEGER PRIMARY KEY,
             description VARCHAR(255) NOT NULL   
         )
 `);
@@ -33,8 +33,8 @@ db.run(`
     CREATE TABLE
         IF NOT EXISTS
         fotos(
-            galeria INTEGER PRIMARY KEY,
-            id INTEGER NOT NULL,
+            galeria_fotos INTEGER PRIMARY KEY,
+            id_fotos INTEGER NOT NULL,
             file VARCHAR (255) NOT NULL        
         )
 `);

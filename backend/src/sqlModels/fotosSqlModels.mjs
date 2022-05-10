@@ -1,7 +1,14 @@
-export const getAllFotosSql = `SELECT id, file, galeria FROM fotos`;
 
-export const postFotosSql = `INSERT INTO fotos (id, file, galeria) VALUES (?, ?, ?)`;
 
-export const putFotosSql = `UPDATE fotos SET id = "${request.body.id}"  WHERE id = "${request.body.id}"`;
+export const getAllFotosSQL = 
+    `SELECT galeria_fotos, id, file FROM fotos WHERE user_id = ?`
 
-export const deleteFotosSql = `DELETE FROM Fotos WHERE id =` + request.body.id;
+export const postFotosSQL = 
+    `INSERT INTO fotos (galeria_fotos, id_fotos, file ) VALUES (?, ?, ?)`;
+
+export const putFotosSQl = 
+    `UPDATE galerias SET id_fotos = ?, file = ?  WHERE galeria_fotos = ? AND user_id = ?`;
+
+export const deleteFotosSQL = 
+    `DELETE FROM Fotos WHERE galeria_fotos = ? AND user_id = ?`;
+    
