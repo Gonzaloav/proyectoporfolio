@@ -1,10 +1,10 @@
-import { db } from "../sqlModels/db.mjs";
+import { db } from "../../sqlModels/db.mjs";
 import {
   getAllGaleriasSQl,
   postGaleriasSQl,
   putGaleriasSQL,
   deleteGaleriasSQL,
-} from "../sqlModels/fotosSqlModels.mjs";
+} from "../../sqlModels/fotosSqlModels.mjs";
 
 // Mostrar Galerias
 export function getAllGaleriasController(request, response) {

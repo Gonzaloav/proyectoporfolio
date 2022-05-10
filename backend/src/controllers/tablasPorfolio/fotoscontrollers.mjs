@@ -1,10 +1,10 @@
-import { db } from "../sqlModels/db.mjs";
+import { db } from "../../sqlModels/db.mjs";
 import {
   getAllFotosSQL,
   postFotosSQL,
   putFotosSQL,
   deleteFotosSQL,
-} from "../sqlModels/fotosSqlModels.mjs";
+} from "../../sqlModels/fotosSqlModels.mjs";
 
 // Mostar fotos
 export function getAllFotosController(request, response) {

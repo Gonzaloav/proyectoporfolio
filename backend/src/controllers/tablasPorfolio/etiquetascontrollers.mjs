@@ -1,10 +1,10 @@
-import { db } from "../sqlModels/db.mjs";
+import { db } from "../../sqlModels/db.mjs";
 import {
    getAllEtiquetasSQL,
   postEtiquetasSQL,
   putEtiquetasSQL,
   deleteEtiquetasSQL,
-} from "../sqlModels/etiquetasSqlModels.mjs";
+} from "../../sqlModels/etiquetasSqlModels.mjs";
 
 // Mostrar Etiquetas .
 export function getAllEtiquetasController(request, response) {
