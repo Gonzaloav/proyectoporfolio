@@ -4,7 +4,7 @@ import {
   postEtiquetasSQL,
   putEtiquetasSQL,
   deleteEtiquetasSQL,
-} from "../../sqlModels/etiquetasSqlModels.mjs";
+} from "../../sqlModels/porfolioSQL/etiquetasSqlModels.mjs";
 
 // Mostrar Etiquetas .
 export function getAllEtiquetasController(request, response) {

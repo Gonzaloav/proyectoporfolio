@@ -4,7 +4,7 @@ import {
   postGaleriasSQl,
   putGaleriasSQL,
   deleteGaleriasSQL,
-} from "../../sqlModels/fotosSqlModels.mjs";
+} from "../../sqlModels/porfolioSQL/galeriasSqlModels.mjs";
 
 // Mostrar Galerias
 export function getAllGaleriasController(request, response) {

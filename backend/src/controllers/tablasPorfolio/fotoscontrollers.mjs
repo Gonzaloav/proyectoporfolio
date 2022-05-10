@@ -4,7 +4,7 @@ import {
   postFotosSQL,
   putFotosSQL,
   deleteFotosSQL,
-} from "../../sqlModels/fotosSqlModels.mjs";
+} from "../../sqlModels/porfolioSQL/fotosSqlModels.mjs";
 
 // Mostar fotos
 export function getAllFotosController(request, response) {
