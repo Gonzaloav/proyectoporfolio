@@ -1,4 +1,5 @@
-import { users } from "../models/usersModels.mjs";
+import { db } from "../models/db.mjs";
+import { authenticateUserSQL } from "../models/usersModels.mjs";
 
 function decodeAuthBasic (headerContent) {
     try {
@@ -7,7 +8,7 @@ function decodeAuthBasic (headerContent) {
         const [ username, password ] = tokenString.split(":");
         return { method, username, password }
     } catch (error) {
-        throw "Malformed authentication";
+        throw "Autenticación mal formada";
     }
 }
 
@@ -15,17 +16,21 @@ export function authMiddleware( request, response, next ) {
     try {
         const { method, username, password } = decodeAuthBasic(request.headers.authorization);
 
-        if ( method != "Basic" ) throw "Invalid authorization method. Use Basic instead."
+        if ( method != "Basic" ) throw "Método de autorización no válido. Use Básico, en su lugar."
     
-        const user = users.find(
-            item => item.name === username && item.password === password
+        db.get(
+            authenticateUserSQL, [username, password],
+            (err, data) => {
+                if (err) throw err
+                if (data) {
+    // Guardar los datos que se van a ir resolviendo en los middeware. Linea 27
+                    response.locals.authorization = { name: data.name, id: data.id };
+                    next();
+                }
+                else throw "Error en la autorización."
+            }
         )
-    
-        if ( user ) {
-            next()
-        }  else {
-            throw "Authorization error"
-        }
+
     } catch (err) {
         console.error(err);
         response.sendStatus(401)
