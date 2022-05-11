@@ -1,5 +1,5 @@
 import express from "express";
-import  { db } from "./sqlModels/db.mjs";
+
 import { getAllEtiquetasController, postEtiquetasController, 
          putEtiquetasController, deleteEtiquetasController, 
          getOneEtiquetasController, } 
@@ -12,6 +12,10 @@ import { getAllGaleriasController, postGaleriasController,
          putGaleriasController, deleteGaleriasController,
          getOneGaleriasController, } 
          from "./controllers/tablasPorfolio/galeriascontrollers.mjs";
+
+import { getAllUsersController, postUsersController,
+         putUsersController, deleteUsersController, }
+         from "./controllers/usuario/usercontrollers.mjs";
 
 
 import { requestLog } from "./middeware/requestsLog.mjs"; 
@@ -28,19 +32,24 @@ try {
 
     app.use (requestLog);
 
+                // Tabla Usuario
+    app.post (PATH_FREFIX + "/users/", jsonParser, authMiddleware, postUsersController );
 
+                // Tabla Porfolio Etiquetas.
     app.get (PATH_FREFIX + "/porfolio/",  authMiddleware, getAllEtiquetasController );
     app.get (PATH_FREFIX + "/porfolio/:id", authMiddleware, getOneEtiquetasController);
     app.post (PATH_FREFIX + "/porfolio/", jsonParser, authMiddleware, postEtiquetasController );
     app.put (PATH_FREFIX + "/porfolio/", jsonParser, authMiddleware, putEtiquetasController ); 
     app.delete (PATH_FREFIX + "/porfolio/", jsonParser, authMiddleware, deleteEtiquetasController );
 
+                // Tabla Porfolio Galerias.
     app.get (PATH_FREFIX + "/porfolio/",  authMiddleware, getAllGaleriasController );
     app.get (PATH_FREFIX + "/porfolio/:id", authMiddleware, getOneGaleriasController);
     app.post (PATH_FREFIX + "/porfolio/", jsonParser, authMiddleware, postGaleriasController );
     app.put (PATH_FREFIX + "/porfolio/", jsonParser, authMiddleware, putGaleriasController ); 
     app.delete (PATH_FREFIX + "/porfolio/", jsonParser, authMiddleware, deleteGaleriasController );
    
+                // Tabla Porfolio Fotos. 
     app.get (PATH_FREFIX + "/porfolio/",  authMiddleware, getAllFotosController );
     app.get (PATH_FREFIX + "/porfolio/:id", authMiddleware, getOneFotosController);
     app.post (PATH_FREFIX + "/porfolio/", jsonParser, authMiddleware, postFotosController );
