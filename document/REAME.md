@@ -194,4 +194,15 @@ Instalaciones.-
 
    ----------------------------------
 
+   + GeekFORCE: Cómo conseguir el trabajo que quieres en IT
+      https://www.youtube.com/watch?v=8cIe4q8dgkM&t=2626s
+
+   + Chequear patrones en javascript
+      https://jstherightway.org/es-es/
+
+   + eventos relacionados con programar
+      https://events.codemotion.com/conferences/online/2022/online-tech-conference-2022-spanish-edition-spring
+
+      Mañana 12/5 a las 17:00 conferencia Diseñando código: una intro a patrones de diseño
+      https://events.codemotion.com/conferences/online/2022/online-tech-conference-2022-spanish-edition-spring/agenda
    
