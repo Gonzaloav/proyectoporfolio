@@ -9,3 +9,6 @@ export const putEtiquetasSQL =
 
 export const deleteEtiquetasSQL =
   `DELETE FROM etiquetas WHERE galeria = ? AND user_id = ?`;
+
+export const getOneEtiquetasByIdSQL =
+  `SELECT id_etiquetas, description, ref, galeria FROM etiquetas WHERE user_id = ? AND user_id = ?`;

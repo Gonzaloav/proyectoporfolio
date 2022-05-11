@@ -1,7 +1,8 @@
 import { db } from "../../sqlModels/db.mjs";
 import {
-   getAllEtiquetasSQL,
+  getAllEtiquetasSQL,
   postEtiquetasSQL,
+  getOneEtiquetasByIdSQL,
   putEtiquetasSQL,
   deleteEtiquetasSQL,
 } from "../../sqlModels/porfolioSQL/etiquetasSqlModels.mjs";
@@ -10,7 +11,7 @@ import {
 export function getAllEtiquetasController(request, response) {
   try {
     db.all(
-      getAllEtiquetasSQL, response.locals.authorization.id,
+      getAllEtiquetasSQL, response.locals.authorization.id_etiquetas,
         (err,data)=>{
             if ( err ) throw err
             else response.json(data)
@@ -21,6 +22,22 @@ export function getAllEtiquetasController(request, response) {
     }
 } 
 
+export function getOneEtiquetasController (request, response) {
+  try {
+      db.get(
+        getOneEtiquetasByIdSQL,
+          [request.params.id_etiquetas, response.locals.authorization.id_etiquetas],
+          (err, data) => {
+              if ( err ) throw err
+              else if ( data ) response.json(data)
+              else response.sendStatus(404)
+          }
+      )
+  } catch (err) {
+      requestError(err, response)
+  }
+}
+
 // Añadir Etiquetas.
 export function postEtiquetasController(request, response) {
   try {
@@ -30,7 +47,7 @@ export function postEtiquetasController(request, response) {
             request.body.description,
             request.body.ref,
             request.body.galeria,
-            response.locals.authorization.id
+            response.locals.authorization.id_etiquetas
         ],
         (err)=>{
             if (err) throw err
@@ -46,18 +63,18 @@ export function postEtiquetasController(request, response) {
 export function putEtiquetasController(request, response) {
   try {
     // Comprobar que la tara existe con getOneTaskByIdSQL.
-    db.get(getOneTaskByIdSQL,
+    db.get(getOneEtiquetasByIdSQL,
         [request.body.id, response.locals.authorization.id],
         (err, data)=>{
             if (err) throw err;
             else if (data) db.run(
               putEtiquetasSQL,
                 [
-                    request.body.id,
+                    request.body.id_etiquetas,
                     request.body.description,
                     request.body.ref,
                     request.body.galeria,
-                    response.locals.authorization.id
+                    response.locals.authorization.id_etiquetas,
                 ],
                 (err)=>{
                     if (err) throw err
@@ -80,7 +97,7 @@ export function deleteEtiquetasController(request, response) {
     db.run(deleteEtiquetasSQL,
         [
             request.body.id,
-            response.locals.authorization.id
+            response.locals.authorization.id_etiquetas
         ],
         (err)=>{
             if (err) throw err
