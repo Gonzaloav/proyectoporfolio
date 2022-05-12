@@ -1,8 +1,8 @@
 import { db } from "../../sqlModels/db.mjs";
 import { requestError } from "../error500.mjs";
 import {
-  getAllGaleriasSQl,
-  postGaleriasSQl,
+  getAllGaleriasSQL,
+  postGaleriasSQL,
   getOneGaleriasByIdSQL,
   putGaleriasSQL,
   deleteGaleriasSQL,
@@ -12,7 +12,7 @@ import {
 export function getAllGaleriasController(request, response) {
   try {
     db.all(
-      getAllGaleriasSQl, response.locals.authorization.id_galerias,
+      getAllGaleriasSQL, response.locals.authorization.id_galerias,
         (err,data)=>{
             if ( err ) throw err
             else response.json(data)
@@ -44,7 +44,7 @@ export function getOneGaleriasController (request, response) {
 export function postGaleriasController(request, response) {
   try {
     db.run(
-      postGaleriasSQl,
+      postGaleriasSQL,
         [
             request.body.id_galerias,
             request.body.description,

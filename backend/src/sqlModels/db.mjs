@@ -1,6 +1,6 @@
 import sqlite3 from 'sqlite3';
 
-const db = new sqlite3.Database('./porfolio.db', (err) => {
+export const db = new sqlite3.Database('./porfolio.db', (err) => {
     if (err) {
         throw err.message;
     }

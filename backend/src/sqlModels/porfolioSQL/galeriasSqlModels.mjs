@@ -4,7 +4,7 @@ export const getAllGaleriasSQL =
 export const postGaleriasSQL = 
   `INSERT INTO galerias (id_galerias, description) VALUES (?,?)`;
 
-export const putGaleriasSQl = 
+export const putGaleriasSQL = 
   `UPDATE galerias SET description = ? WHERE id_galerias = ? AND user_id = ?`;
 
 export const deleteGaleriasSQL =
