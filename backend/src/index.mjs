@@ -36,25 +36,25 @@ try {
     app.post (PATH_FREFIX + "/users/", jsonParser, authMiddleware, postUsersController );
 
                 // Tabla Porfolio Etiquetas.
-    app.get (PATH_FREFIX + "/porfolio/",  authMiddleware, getAllEtiquetasController );
-    app.get (PATH_FREFIX + "/porfolio/:id", authMiddleware, getOneEtiquetasController);
-    app.post (PATH_FREFIX + "/porfolio/", jsonParser, authMiddleware, postEtiquetasController );
-    app.put (PATH_FREFIX + "/porfolio/", jsonParser, authMiddleware, putEtiquetasController ); 
-    app.delete (PATH_FREFIX + "/porfolio/", jsonParser, authMiddleware, deleteEtiquetasController );
+    app.get (PATH_FREFIX + "/porfolio/etiqueta",  authMiddleware, getAllEtiquetasController );
+    app.get (PATH_FREFIX + "/porfolio/etiqueta/:id", authMiddleware, getOneEtiquetasController);
+    app.post (PATH_FREFIX + "/porfolio/etiqueta", jsonParser, authMiddleware, postEtiquetasController );
+    app.put (PATH_FREFIX + "/porfolio/etiqueta", jsonParser, authMiddleware, putEtiquetasController ); 
+    app.delete (PATH_FREFIX + "/porfolio/etiqueta", jsonParser, authMiddleware, deleteEtiquetasController );
 
                 // Tabla Porfolio Galerias.
-    app.get (PATH_FREFIX + "/porfolio/",  authMiddleware, getAllGaleriasController );
-    app.get (PATH_FREFIX + "/porfolio/:id", authMiddleware, getOneGaleriasController);
-    app.post (PATH_FREFIX + "/porfolio/", jsonParser, authMiddleware, postGaleriasController );
-    app.put (PATH_FREFIX + "/porfolio/", jsonParser, authMiddleware, putGaleriasController ); 
-    app.delete (PATH_FREFIX + "/porfolio/", jsonParser, authMiddleware, deleteGaleriasController );
+    app.get (PATH_FREFIX + "/porfolio/galeria",  authMiddleware, getAllGaleriasController );
+    app.get (PATH_FREFIX + "/porfolio/galeria/:id", authMiddleware, getOneGaleriasController);
+    app.post (PATH_FREFIX + "/porfolio/galeria", jsonParser, authMiddleware, postGaleriasController );
+    app.put (PATH_FREFIX + "/porfolio/galeria", jsonParser, authMiddleware, putGaleriasController ); 
+    app.delete (PATH_FREFIX + "/porfolio/galeria", jsonParser, authMiddleware, deleteGaleriasController );
    
                 // Tabla Porfolio Fotos. 
-    app.get (PATH_FREFIX + "/porfolio/",  authMiddleware, getAllFotosController );
-    app.get (PATH_FREFIX + "/porfolio/:id", authMiddleware, getOneFotosController);
-    app.post (PATH_FREFIX + "/porfolio/", jsonParser, authMiddleware, postFotosController );
-    app.put (PATH_FREFIX + "/porfolio/", jsonParser, authMiddleware, putFotosController ); 
-    app.delete (PATH_FREFIX + "/porfolio/", jsonParser, authMiddleware, deleteFotosController );
+    app.get (PATH_FREFIX + "/porfolio/foto",  authMiddleware, getAllFotosController );
+    app.get (PATH_FREFIX + "/porfolio/foto/:id", authMiddleware, getOneFotosController);
+    app.post (PATH_FREFIX + "/porfolio/foto", jsonParser, authMiddleware, postFotosController );
+    app.put (PATH_FREFIX + "/porfolio/foto", jsonParser, authMiddleware, putFotosController ); 
+    app.delete (PATH_FREFIX + "/porfolio/foto", jsonParser, authMiddleware, deleteFotosController );
     
     
     app.use (errorsHandler);
