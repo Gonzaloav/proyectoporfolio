@@ -1,4 +1,5 @@
 import { db } from "../../sqlModels/db.mjs";
+import { requestError } from "../error500.mjs";
 import {
   getAllEtiquetasSQL,
   postEtiquetasSQL,
