@@ -49,7 +49,7 @@ export function postEtiquetasController(request, response) {
             request.body.description,
             request.body.ref,
             request.body.galeria,
-            response.locals.authorization.id_etiquetas
+           // response.locals.authorization.id_etiquetas
         ],
         (err)=>{
             if (err) throw err
