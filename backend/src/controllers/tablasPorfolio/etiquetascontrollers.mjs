@@ -45,6 +45,7 @@ export function postEtiquetasController(request, response) {
     db.run(
       postEtiquetasSQL,
         [
+            request.body.id_etiquetas,
             request.body.description,
             request.body.ref,
             request.body.galeria,

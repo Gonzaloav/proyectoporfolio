@@ -46,7 +46,6 @@ export function postGaleriasController(request, response) {
     db.run(
       postGaleriasSQL,
         [
-            request.body.id_galerias,
             request.body.description,
             response.locals.authorization.id_galerias
         ],

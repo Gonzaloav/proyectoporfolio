@@ -27,7 +27,10 @@ export function getOneFotosController (request, response) {
   try {
       db.get(
         getOneFotosByIdSQL,
-          [request.params.id_galerias, response.locals.authorization.id_galerias],
+          [
+           request.params.id_galerias, 
+           response.locals.authorization.id_galerias
+          ],
           (err, data) => {
               if ( err ) throw err
               else if ( data ) response.json(data)
