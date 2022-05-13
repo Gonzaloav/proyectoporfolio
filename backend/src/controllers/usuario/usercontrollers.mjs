@@ -11,7 +11,7 @@ export function getAllUsersController(request, response) {
   db.all(getAllUsersSQL, (err, data) => {
     if (err) {
       console.error(err);
-      response.sendStatus(500).send ('Error del servidor');
+      response.sendStatus(500);
     } else {
       response.json(data);
     }
@@ -20,13 +20,13 @@ export function getAllUsersController(request, response) {
 
 // Añadir Usuarios.
 export function postUsersController(request, response) {
-  const { users_id, name, password } = request.body;
-  db.run(postUsersSQL, [users_id, name, password], (err) => {
+  const { name, password } = request.body
+  db.run(postUsersSQL, [name, password], (err) => {
     if (err) {
       console.error(err);
-      response.sendStatus(500).send ('Error del servidor');
+      response.sendStatus(500);
     } else {
-      response.sendStatus(201).send ('Hola Mundo');
+      response.sendStatus(201);
     }
   });
 }
@@ -36,21 +36,22 @@ export function putUsersController(request, response) {
   db.run(putUsersSQL, (err) => {
     if (err) {
       console.error(err);
-      response.sendStatus(500).send ('Error del servidor');
+      response.sendStatus(500);
     } else {
-      response.sendStatus(200).send ('Hola Mundo');
+      response.sendStatus(200);
     }
   });
 }
 
 // Eliminar Usuarios.
 export function deleteUsersController(request, response) {
-  db.run(deleteUsersSQL, (err) => {
+  const { name, password } = request.body
+  db.run(deleteUsersSQL,[ name, password], (err) => {
     if (err) {
-      console.error(err);
-      response.sendStatus(500).send ('Error del servidor');
+      console.error(err); 
+      response.sendStatus(500);
     } else {
-      response.sendStatus(200).send ('Hola Mundo');
+      response.sendStatus(200);
     }
   });
 }

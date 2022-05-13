@@ -55,7 +55,7 @@ export function postFotosController(request, response) {
         ],
         (err)=>{
             if (err) throw err
-            else response.sendStatus(201).send ('Hola Mundo');
+            else response.sendStatus(201);
         }
     )
 } catch (err) {
@@ -81,7 +81,7 @@ export function putFotosController(request, response) {
                 (err)=>{
                     if (err) throw err
                     else {
-                        response.sendStatus(200).send ('Hola Mundo');
+                        response.sendStatus(200);
                     }
                 }
             )
@@ -104,7 +104,7 @@ export function deleteFotosController(request, response) {
         ],
         (err)=>{
             if (err) throw err
-            else response.sendStatus(200).send ('Hola Mundo');
+            else response.sendStatus(200);
         })
 } catch (err) {
     requestError(err, response)

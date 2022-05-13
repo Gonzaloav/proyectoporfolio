@@ -24,11 +24,11 @@ import { errorsHandler } from "./middeware/errorsHandler.mjs";
 
 
 const PATH_FREFIX = "/api/v0.0";
-
+const app = express ();
 // http://Localhost:3000/api/v0.0
 
 try { 
-    const app = express ();
+    
     const jsonParser = express.json ();
 
     //app.use (requestLog);

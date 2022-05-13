@@ -27,7 +27,7 @@ export function getOneEtiquetasController (request, response) {
   try {
       db.get(
         getOneEtiquetasByIdSQL,
-          [request.params.id_etiquetas, response.locals.authorization.id_etiquetas],
+          [request.params.id_etiquetas, response.locals.authorization.id_etiquetas ],
           (err, data) => {
               if ( err ) throw err
               else if ( data ) response.json(data)
@@ -53,7 +53,7 @@ export function postEtiquetasController(request, response) {
         ],
         (err)=>{
             if (err) throw err
-            else response.sendStatus(201).send ('Hola Mundo');
+            else response.sendStatus(201);
         }
     )
 } catch (err) {
@@ -66,7 +66,7 @@ export function putEtiquetasController(request, response) {
   try {
     // Comprobar que la tara existe con getOneTaskByIdSQL.
     db.get(getOneEtiquetasByIdSQL,
-        [request.body.id, response.locals.authorization.id],
+        [request.body.id_etiquetas, response.locals.authorization.id_etiquetas],
         (err, data)=>{
             if (err) throw err;
             else if (data) db.run(
@@ -81,7 +81,7 @@ export function putEtiquetasController(request, response) {
                 (err)=>{
                     if (err) throw err
                     else {
-                        response.sendStatus(200).send ('Hola Mundo');
+                        response.sendStatus(200);
                     }
                 }
             )
@@ -98,12 +98,12 @@ export function deleteEtiquetasController(request, response) {
   try {
     db.run(deleteEtiquetasSQL,
         [
-            request.body.id,
+            request.body.id_etiquetas,
             response.locals.authorization.id_etiquetas
         ],
         (err)=>{
             if (err) throw err
-            else response.sendStatus(200).send ('Hola Mundo');
+            else response.sendStatus(200);
         })
 } catch (err) {
     requestError(err, response)
