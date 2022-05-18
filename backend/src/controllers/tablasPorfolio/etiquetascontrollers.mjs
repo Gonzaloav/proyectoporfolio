@@ -12,7 +12,7 @@ import {
 export function getAllEtiquetasController(request, response) {
   try {
     db.all(
-      getAllEtiquetasSQL, response.locals.authorization.id_etiquetas,
+      getAllEtiquetasSQL, // response.locals.authorization.id_etiquetas,
         (err,data)=>{
             if ( err ) throw err
             else response.json(data)
@@ -27,7 +27,7 @@ export function getOneEtiquetasController (request, response) {
   try {
       db.get(
         getOneEtiquetasByIdSQL,
-          [request.params.id_etiquetas, response.locals.authorization.id_etiquetas ],
+          [request.params.id_etiquetas,], //response.locals.authorization.id_etiquetas 
           (err, data) => {
               if ( err ) throw err
               else if ( data ) response.json(data)
@@ -62,35 +62,24 @@ export function postEtiquetasController(request, response) {
 }
 
 // Modificar Etiquetas.
-export function putEtiquetasController(request, response) {
-  try {
-    // Comprobar que la tara existe con getOneTaskByIdSQL.
-    db.get(getOneEtiquetasByIdSQL,
-        [request.body.id_etiquetas, response.locals.authorization.id_etiquetas],
-        (err, data)=>{
-            if (err) throw err;
-            else if (data) db.run(
-              putEtiquetasSQL,
-                [
-                    request.body.id_etiquetas,
-                    request.body.description,
-                    request.body.ref,
-                    request.body.galeria,
-                    response.locals.authorization.id_etiquetas,
-                ],
-                (err)=>{
-                    if (err) throw err
-                    else {
-                        response.sendStatus(200);
-                    }
-                }
-            )
-            else response.sendStatus(404);
+
+export function putEtiquetasController (request, response){
+  db.run(putEtiquetasSQL,
+    [
+        request.body.id_etiquetas,
+        request.body.description,
+        request.body.ref,
+        request.body.galeria],
+    
+    (err) => {
+        if (err) {
+            console.error(err);
+            response.sendStatus(500)
+        } else {
+            response.sendStatus(200)
         }
-    )
-} catch (err) {
-    requestError(err, response)
-}
+    }
+)
 }
 
 // Eliminar Etiquetas
@@ -99,7 +88,7 @@ export function deleteEtiquetasController(request, response) {
     db.run(deleteEtiquetasSQL,
         [
             request.body.id_etiquetas,
-            response.locals.authorization.id_etiquetas
+            // response.locals.authorization.id_etiquetas
         ],
         (err)=>{
             if (err) throw err

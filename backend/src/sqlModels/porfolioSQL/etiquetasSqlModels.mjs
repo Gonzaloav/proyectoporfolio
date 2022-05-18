@@ -1,14 +1,14 @@
 export const getAllEtiquetasSQL = 
-  `SELECT id_etiquetas, description, ref, galeria FROM etiquetas WHERE user_id = ?`;
+  `SELECT id_etiquetas, description, ref, galeria FROM etiquetas`;
 
 export const postEtiquetasSQL = 
   `INSERT INTO etiquetas (id_etiquetas, description, ref, galeria)   VALUES (?, ?, ?, ?)`;
 
 export const putEtiquetasSQL = 
-  `UPDATE etiquetas SET id_etiquetas, description = ?, ref = ? WHERE galerias = ? AND user_id = ?`;
+  `UPDATE etiquetas SET id_etiquetas =?, description = ?, ref = ? WHERE galeria =?`;
 
 export const deleteEtiquetasSQL =
-  `DELETE FROM etiquetas WHERE galeria = ? AND user_id = ?`;
+  `DELETE FROM etiquetas WHERE galeria = ?`;
 
 export const getOneEtiquetasByIdSQL =
-  `SELECT id_etiquetas, description, ref, galeria FROM etiquetas WHERE user_id = ? AND user_id = ?`;
+  `SELECT id_etiquetas, description, ref, galeria FROM etiquetas`;
