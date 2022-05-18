@@ -3,7 +3,6 @@ import { requestError } from "../error500.mjs";
 import {
   getAllFotosSQL,
   postFotosSQL,
-  getOneFotosByIdSQL,
   putFotosSQL,
   deleteFotosSQL,
 } from "../../sqlModels/porfolioSQL/fotosSqlModels.mjs";
@@ -12,7 +11,7 @@ import {
 export function getAllFotosController(request, response) {
   try {
     db.all(
-      getAllFotosSQL, response.locals.authorization.id_fotos,
+      getAllFotosSQL, // response.locals.authorization.id_fotos,
         (err,data)=>{
             if ( err ) throw err
             else response.json(data)
@@ -29,7 +28,6 @@ export function getOneFotosController (request, response) {
         getOneFotosByIdSQL,
           [
            request.params.id_galerias, 
-           response.locals.authorization.id_galerias
           ],
           (err, data) => {
               if ( err ) throw err
@@ -51,7 +49,6 @@ export function postFotosController(request, response) {
             request.body.id_fotos,
             request.body.file,
             request.body.galeria_fotos,
-            response.locals.authorization.id_fotos
         ],
         (err)=>{
             if (err) throw err
@@ -63,36 +60,25 @@ export function postFotosController(request, response) {
 }
 }
 //  Modificar Fotos
-export function putFotosController(request, response) {
-  try {
-    // Comprobar que la tara existe con getOneTaskByIdSQL.
-    db.get(getOneFotosByIdSQL,
-        [request.body.id_fotos, response.locals.authorization.id_fotos],
-        (err, data)=>{
-            if (err) throw err;
-            else if (data) db.run(
-              putFotosSQL,
-                [
+
+export function putFotosController (request, response){
+  db.run(
+    putFotosSQL, [
                     request.body.id_fotos,
                     request.body.file,
-                    request.body.galeria_fotos,
-                    response.locals.authorization.id_fotos,
+                    request.body.galeria_fotos
                 ],
-                (err)=>{
-                    if (err) throw err
-                    else {
-                        response.sendStatus(200);
-                    }
-                }
-            )
-            else response.sendStatus(404);
+    
+    (err) => {
+        if (err) {
+            console.error(err);
+            response.sendStatus(500)
+        } else {
+            response.sendStatus(200)
         }
-    )
-} catch (err) {
-    requestError(err, response)
+    }
+)
 }
-}
-
 
 // Eliminar fotos
 export function deleteFotosController(request, response) {
@@ -100,7 +86,7 @@ export function deleteFotosController(request, response) {
     db.run(deleteFotosSQL,
         [
             request.body.id_fotos,
-            response.locals.authorization.id_fotos
+            // response.locals.authorization.id_fotos
         ],
         (err)=>{
             if (err) throw err
@@ -110,3 +96,21 @@ export function deleteFotosController(request, response) {
     requestError(err, response)
 }
 }
+
+
+/** export function putFotosController(request, response) {
+  try {
+    // Comprobar que la tara existe con getOneTaskByIdSQL.
+    db.get(getOneFotosByIdSQL,
+        [request.body.id_fotos,], //response.locals.authorization.id_fotos
+        (err, data)=>{       if (err) throw err;
+            else if (data) db.run(    putFotosSQL,
+                [   request.body.id_fotos,
+                    request.body.file,
+                    request.body.galeria_fotos,
+                    response.locals.authorization.id_fotos,
+                ],      (err)=>{
+                    if (err) throw err         else {   response.sendStatus(200); }   }
+            )     else response.sendStatus(404);  }       )
+} catch (err) {      requestError(err, response)     }       }*/
+
