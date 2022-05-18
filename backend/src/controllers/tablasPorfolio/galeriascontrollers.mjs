@@ -12,7 +12,7 @@ import {
 export function getAllGaleriasController(request, response) {
   try {
     db.all(
-      getAllGaleriasSQL, response.locals.authorization.id_galerias,
+      getAllGaleriasSQL, //response.locals.authorization.id_galerias,
         (err,data)=>{
             if ( err ) throw err
             else response.json(data)
@@ -28,7 +28,8 @@ export function getOneGaleriasController (request, response) {
   try {
       db.get(
         getOneGaleriasByIdSQL,
-          [request.params.id_galerias, response.locals.authorization.id_galerias],
+          [request.params.id_galerias, //response.locals.authorization.id_galerias
+          ],
           (err, data) => {
               if ( err ) throw err
               else if ( data ) response.json(data)
@@ -45,9 +46,9 @@ export function postGaleriasController(request, response) {
   try {
     db.run(
       postGaleriasSQL,
-        [
-            request.body.description,
-            response.locals.authorization.id_galerias
+        [  
+           request.body.id_galerias,
+           request.body.description   
         ],
         (err)=>{
             if (err) throw err
@@ -61,41 +62,33 @@ export function postGaleriasController(request, response) {
 
 
 // Modificar Galerias
-export function putGaleriasController(request, response) {
-  try {
-    // Comprobar que la tara existe con getOneGaleriasByIdSQL.
-    db.get ( getOneGaleriasByIdSQL,
-        [request.body.id_galerias, response.locals.authorization.id_galerias],
-        (err, data)=>{
-            if (err) throw err;
-            else if (data) db.run(
-              putGaleriasSQL,
+
+export function putGaleriasController (request, response){
+  db.run(
+    putGaleriasSQL,
                 [
                     request.body.id_galerias,
                     request.body.description,
-                    response.locals.authorization.id_galerias,
                 ],
-                (err)=>{
-                    if (err) throw err
-                    else {
-                        response.sendStatus(200);
-                    }
-                }
-            )
-            else response.sendStatus(404);
+    (err) => {
+        if (err) {
+            console.error(err);
+            response.sendStatus(500)
+        } else {
+            response.sendStatus(200)
         }
-    )
-} catch (err) {
-    requestError(err, response)
+    }
+)
 }
-}
+
+
 // Eliminar Galerias
 export function deleteGaleriasController(request, response) {
   try {
     db.run(deleteGaleriasSQL,
         [
             request.body.id_galerias,
-            response.locals.authorization.id_galerias
+            // response.locals.authorization.id_galerias
         ],
         (err)=>{
             if (err) throw err
@@ -105,3 +98,18 @@ export function deleteGaleriasController(request, response) {
     requestError(err, response)
 }
 }
+
+
+/**export function putGaleriasController(request, response) {
+  try {
+    // Comprobar que la tara existe con getOneGaleriasByIdSQL.
+    db.get ( getOneGaleriasByIdSQL,
+        [request.body.id_galerias, // response.locals.authorization.id_galerias ],
+        (err, data)=>{     if (err) throw err;
+            else if (data) db.run(   putGaleriasSQL,   [    request.body.id_galerias,
+                    request.body.description,
+                    response.locals.authorization.id_galerias ],
+                (err)=>{    if (err) throw err      else {
+                        response.sendStatus(200);   }  }  )
+            else response.sendStatus(404);   }  )
+} catch (err) {    requestError(err, response)  }   }  */
