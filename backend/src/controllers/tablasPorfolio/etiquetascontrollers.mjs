@@ -23,22 +23,6 @@ export function getAllEtiquetasController(request, response) {
     }
 } 
 
-export function getOneEtiquetasController (request, response) {
-  try {
-      db.get(
-        getOneEtiquetasByIdSQL,
-          [request.params.id_etiquetas,], //response.locals.authorization.id_etiquetas 
-          (err, data) => {
-              if ( err ) throw err
-              else if ( data ) response.json(data)
-              else response.sendStatus(404)
-          }
-      )
-  } catch (err) {
-      requestError(err, response)
-  }
-}
-
 // Añadir Etiquetas.
 export function postEtiquetasController(request, response) {
   try {
@@ -87,8 +71,7 @@ export function deleteEtiquetasController(request, response) {
   try {
     db.run(deleteEtiquetasSQL,
         [
-            request.body.id_etiquetas,
-            // response.locals.authorization.id_etiquetas
+            request.body.galeria,
         ],
         (err)=>{
             if (err) throw err
@@ -101,3 +84,18 @@ export function deleteEtiquetasController(request, response) {
   
 
 
+export function getOneEtiquetasController (request, response) {
+  try {
+      db.get(
+        getOneEtiquetasByIdSQL,
+          [request.params.id_etiquetas,], //response.locals.authorization.id_etiquetas 
+          (err, data) => {
+              if ( err ) throw err
+              else if ( data ) response.json(data)
+              else response.sendStatus(404)
+          }
+      )
+  } catch (err) {
+      requestError(err, response)
+  }
+}
