@@ -33,7 +33,13 @@ export function postUsersController(request, response) {
 
 // Modificar Usurios.
 export function putUsersController(request, response) {
-  db.run(putUsersSQL, (err) => {
+  db.run(putUsersSQL, 
+    [
+     
+     request.body.name,
+     request.body.users_id
+  ],
+    (err) => {
     if (err) {
       console.error(err);
       response.sendStatus(500);
@@ -45,8 +51,11 @@ export function putUsersController(request, response) {
 
 // Eliminar Usuarios.
 export function deleteUsersController(request, response) {
-  const { name, password } = request.body
-  db.run(deleteUsersSQL,[ name, password], (err) => {
+  db.run(deleteUsersSQL,
+    [ 
+      request.body.users_id
+    ], 
+    (err) => {
     if (err) {
       console.error(err); 
       response.sendStatus(500);
