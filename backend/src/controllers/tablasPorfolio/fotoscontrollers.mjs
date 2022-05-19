@@ -85,7 +85,7 @@ export function deleteFotosController(request, response) {
   try {
     db.run(deleteFotosSQL,
         [
-            request.body.id_fotos,
+            request.body.galeria_fotos,
             // response.locals.authorization.id_fotos
         ],
         (err)=>{

@@ -7,7 +7,7 @@ export const postFotosSQL =
     `INSERT INTO fotos (id_fotos, file, galeria_fotos) VALUES (?, ?, ?)`;
 
 export const putFotosSQL = 
-    `UPDATE galerias SET id_fotos = ?, file = ? WHERE galeria_fotos = ?`;
+    `UPDATE fotos SET id_fotos = ?, file = ? WHERE galeria_fotos = ?`;
 
 export const deleteFotosSQL = 
     `DELETE FROM fotos WHERE galeria_fotos = ?`;
