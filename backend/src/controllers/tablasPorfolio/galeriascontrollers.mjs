@@ -67,8 +67,8 @@ export function putGaleriasController (request, response){
   db.run(
     putGaleriasSQL,
                 [
-                    request.body.id_galerias,
-                    request.body.description,
+                  request.body.description,
+                  request.body.id_galerias
                 ],
     (err) => {
         if (err) {
@@ -88,7 +88,6 @@ export function deleteGaleriasController(request, response) {
     db.run(deleteGaleriasSQL,
         [
             request.body.id_galerias,
-            // response.locals.authorization.id_galerias
         ],
         (err)=>{
             if (err) throw err

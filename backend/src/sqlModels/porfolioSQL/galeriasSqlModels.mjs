@@ -10,5 +10,8 @@ export const putGaleriasSQL =
 export const deleteGaleriasSQL =
   `DELETE FROM galerias WHERE id_galerias = ?`;
 
+
+
+  
 export const getOneGaleriasByIdSQL =
   `SELECT id_galerias, description FROM galerias`;
