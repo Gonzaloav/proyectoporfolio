@@ -184,8 +184,13 @@ VISTAS.- Galeria.- (onClick, setView)
 
    6. Enlaces a [google] (
          https://techclub.tajamar.es/componentes-libres-en-react-para-imagenes-y-video/)
-      web para carrusel 
-   
+      web para carrusel general.
+    7. Enlaces a [google] (
+         https://react-bootstrap.github.io/components/carousel/)
+      componente carrusel. 
+    8. Enlaces a [google] (
+         http://neptunian.github.io/react-photo-gallery/)
+      React Photo Gallery
 
 
 ---------------------------
