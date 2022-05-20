@@ -182,6 +182,12 @@ VISTAS.- Galeria.- (onClick, setView)
          . photos = [{}]
          . currentPhoto = 1. 
 
+   6. Enlaces a [google] (
+         https://techclub.tajamar.es/componentes-libres-en-react-para-imagenes-y-video/)
+      web para carrusel 
+   
+
+
 ---------------------------
 
 Instalaciones.-
