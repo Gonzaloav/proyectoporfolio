@@ -191,8 +191,9 @@ VISTAS.- Galeria.- (onClick, setView)
     8. Enlaces a [google] (
          http://neptunian.github.io/react-photo-gallery/)
       React Photo Gallery
-
-
+   9. Enlaces a [google] (
+      https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/sizes)
+      tamaños imagenes javascript
 ---------------------------
 
 Instalaciones.-

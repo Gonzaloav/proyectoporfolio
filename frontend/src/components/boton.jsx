@@ -5,4 +5,12 @@ function botonGenerico({children, action}) {
     );  
 }
 
-export default botonGenerico
+
+
+
+function flechaatras(event) {
+    setResult ()
+    
+}
+
+export default botonGenerico; 
