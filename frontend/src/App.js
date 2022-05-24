@@ -1,5 +1,7 @@
 
 import { useState } from "react";
+import  avanzar  from "./components/Imagenes/botones/flechaadelante.png";
+import  atrasar  from "./components/Imagenes/botones/flechaatras.png";
 
 
 function App() {
@@ -23,16 +25,16 @@ function App() {
   return (
     <div>
       <button onClick={restaHandler} value = "-"> 
-          <img src= "./components/imagenes/botones/flechaatras.png"/> 
+          <img src= {atrasar}/> 
       </button>
       
       <button onClick={sumaHandler} value = "+">  
-          <img src= "./components/imagenes/botones/flechaadelante.png"/>
+          <img src= {avanzar}/>
       </button>
     </div>
   );
 }
 
-// <img alt="Tortugas_1" src="./components/fauna/Tortugas_rune_21.jpeg" />  
+
 
 export default App;
