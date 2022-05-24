@@ -1,30 +1,34 @@
-import "./App.css";
-import { useState } from "react/cjs/react.production.min";
-import { botonGenerico  } from "./components/boton.jsx";
+
+import { useState } from "react";
+
 
 function App() {
-  const [flechaanterior, setFlechaanterior] = useState([]);
-  const [flechaposterior, setFlechaposterior] = useState ([]);
 
-  function flechaAtrasHandler(event) {
-    setFlechaanterior (parseFloat(event.target.value));
+
+  const [flecha, setFlecha] = useState([]);
+  
+  // función flecha ">" o "<"
+  function flechaHandler(event) {
+    setFlecha (event.target.value);
   }
-
-  function flechaAdelanteHandler(event) {
-    setFlechaposterior (parseFloat(event.target.value));
+ // función flecha anterior "<"
+ function restaHandler(event) {
+    flechaHandler = (setFlecha --);
+  } 
+  // función flecha posterior ">"
+  function sumaHandler(event) {
+    flechaHandler = (setFlecha ++);  
   }
 
   return (
     <div>
-      <button onClick={flechaAtrasHandler} value="<">
-      <img alt="Tortugas_1" src="./components/fauna/Tortugas_rune_21.jpeg" />  
-      </button>
+      <button onClick={restaHandler} value = "-"> - </button>
       
-      <button onClick={flechaAdelanteHandler} value=">">
-      <img alt="Tortugas_1" src="./components/fauna/Tortugas_rune_21.jpeg" />  
-      </button>
+      <button onClick={sumaHandler} value = "+">  +   </button>
     </div>
   );
 }
+
+// <img alt="Tortugas_1" src="./components/fauna/Tortugas_rune_21.jpeg" />  
 
 export default App;

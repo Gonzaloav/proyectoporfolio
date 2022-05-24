@@ -193,10 +193,22 @@ VISTAS.- Galeria.- (onClick, setView)
       React Photo Gallery
    9. Enlaces a [google] (
       https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/sizes)
-      tamaños imagenes javascript
+      Tamaños imagenes javascript
 
    10. Enlaces a [google] (
       https://expressjs.com/es/starter/static-files.html)
+
+   11. Enlaces a [google] (
+      https://www.npmjs.com/package/mmmagic)
+      Ver si es una imagen // npm install mmmagic
+   
+   12. Enlaces a [google] (
+      https://www.npmjs.com/package/image-size?Cachedget)
+      Para saber el tamaño de la imagen // npm install image-size --save
+
+   13. Enlaces a [google] (
+         https://imagemagick.org/index.php)
+      Editor de imagenes completo desde el código. 
       
 ---------------------------
 
