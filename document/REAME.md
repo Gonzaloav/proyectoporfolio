@@ -194,6 +194,10 @@ VISTAS.- Galeria.- (onClick, setView)
    9. Enlaces a [google] (
       https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/sizes)
       tamaños imagenes javascript
+
+   10. Enlaces a [google] (
+      https://expressjs.com/es/starter/static-files.html)
+      
 ---------------------------
 
 Instalaciones.-
