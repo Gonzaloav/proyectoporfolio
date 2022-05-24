@@ -22,9 +22,13 @@ function App() {
 
   return (
     <div>
-      <button onClick={restaHandler} value = "-"> - </button>
+      <button onClick={restaHandler} value = "-"> 
+          <img src= "./components/imagenes/botones/flechaatras.png"/> 
+      </button>
       
-      <button onClick={sumaHandler} value = "+">  +   </button>
+      <button onClick={sumaHandler} value = "+">  
+          <img src= "./components/imagenes/botones/flechaadelante.png"/>
+      </button>
     </div>
   );
 }
