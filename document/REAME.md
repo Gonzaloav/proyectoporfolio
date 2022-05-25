@@ -219,6 +219,7 @@ Instalaciones.-
    4. npx create-react-app . (frontend).
    5. npm init -y (backend).
    6. npm install express (backend).
+   7. npm install image-size --save.
 
    ----------------------------------
 
