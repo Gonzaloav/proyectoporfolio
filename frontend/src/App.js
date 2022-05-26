@@ -1,40 +1,24 @@
-
+import React from "react";
 import { useState } from "react";
-import  avanzar  from "./components/Imagenes/botones/flechaadelante.png";
-import  atrasar  from "./components/Imagenes/botones/flechaatras.png";
-
+import avanzar from "./components/Imagenes/botones/flechaadelante.png";
+import atrasar from "./components/Imagenes/botones/flechaatras.png";
 
 function App() {
-
-
-  const [flecha, setFlecha] = useState([]);
-  
-  // función flecha ">" o "<"
-  function flechaHandler(event) {
-    setFlecha (event.target.value);
-  }
- // función flecha anterior "<"
- function restaHandler(event) {
-    flechaHandler = (setFlecha --);
-  } 
-  // función flecha posterior ">"
-  function sumaHandler(event) {
-    flechaHandler = (setFlecha ++);  
-  }
-
-  return (
-    <div>
-      <button onClick={restaHandler} value = "-"> 
-          <img src= {atrasar}/> 
-      </button>
-      
-      <button onClick={sumaHandler} value = "+">  
-          <img src= {avanzar}/>
-      </button>
-    </div>
-  );
+  const carruselinicio = () => {
+    return (
+      <div
+        style={{
+          backgroundImage:
+            'url("https://media.geeksforgeeks.org/' +
+            'wp-content/uploads/20201221222410/download3.png")',
+          height: "300px",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <h1> HELLO </h1>
+      </div>
+    );
+  };
 }
-
-
 
 export default App;
