@@ -209,7 +209,10 @@ VISTAS.- Galeria.- (onClick, setView)
    13. Enlaces a [google] (
          https://imagemagick.org/index.php)
       Editor de imagenes completo desde el código. 
-      
+
+   14. Enlaces a [google] (
+         https://www.escuelafrontend.com/articulos/rutas-react-router6)
+      Extructura de rutas. 
 ---------------------------
 
 Instalaciones.-

@@ -68,3 +68,49 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+--------------------------------------------------------------------------------
+VISTAS.- Galeria.- (onClick, setView)
+
+   1. Miniaturas = onClik, setcurrentPhoto, setView = Foto. 
+   2. Carrusel =   onClik, setcurrentPhoto, setView = Foto.
+   3. Fotos =     incluye descripción.
+   4. Portada =   incluye descripción. 
+   5.    . view = Miniaturas - Carrusel - Fotos. 
+         . showdescription = true / false. 
+         . photos = [{}]
+         . currentPhoto = 1. 
+
+   6. Enlaces a [google] (
+         https://techclub.tajamar.es/componentes-libres-en-react-para-imagenes-y-video/)
+      web para carrusel general.
+    7. Enlaces a [google] (
+         https://react-bootstrap.github.io/components/carousel/)
+      componente carrusel. 
+    8. Enlaces a [google] (
+         http://neptunian.github.io/react-photo-gallery/)
+      React Photo Gallery
+   9. Enlaces a [google] (
+      https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/sizes)
+      Tamaños imagenes javascript
+
+   10. Enlaces a [google] (
+      https://expressjs.com/es/starter/static-files.html)
+
+   11. Enlaces a [google] (
+      https://www.npmjs.com/package/mmmagic)
+      Ver si es una imagen // npm install mmmagic
+   
+   12. Enlaces a [google] (
+      https://www.npmjs.com/package/image-size?Cachedget)
+      Para saber el tamaño de la imagen // npm install image-size --save
+
+   13. Enlaces a [google] (
+         https://imagemagick.org/index.php)
+      Editor de imagenes completo desde el código. 
+
+   14. Enlaces a [google] (
+         https://www.escuelafrontend.com/articulos/rutas-react-router6)
+      Extructura de rutas. 
+      
