@@ -38,6 +38,14 @@ function App() {
     </div>
   );
 }
-/**<div className="fotosinicio">
+/**<div style={{
+      backgroundImage: "url(/background.jpg)",
+      height: "300px",
+      backgroundRepeat: "no-repeat"
+    }} >
+      <h1>Hello</h1>
+    </div>
+ * 
+ * <div className="fotosinicio">
             </div>*/
 export default App;

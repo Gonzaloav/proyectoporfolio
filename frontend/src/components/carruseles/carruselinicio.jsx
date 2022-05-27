@@ -8,7 +8,7 @@ let index = 0;
 const listaimg = [paisaje, fauna, retrato, conceptual];
 
 export function carruselinicio() {
-  setInterval(cambioimagen, 20000);
+  setInterval(cambioimagen, 7000);
 }
 
 function cambioimagen() {
