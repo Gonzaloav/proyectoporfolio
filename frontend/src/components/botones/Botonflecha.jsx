@@ -1,9 +1,9 @@
 import { useState} from "react";
-import  avanzar  from "./Imagenes/imgbotones/flechaadelante.png";
-import  atrasar  from "./Imagenes/imgbotones/flechaatras.png";
+import  avanzar  from "../Imagenes/imgbotones/flechaadelante.png";
+import  atrasar  from "../Imagenes/imgbotones/flechaatras.png";
 
 
-export function botonflecha() {
+export function Botonflecha() {
   
   const [flecha, setFlecha] = useState([]);
   
@@ -34,4 +34,4 @@ export function botonflecha() {
 
 }
 
-export default botonflecha; 
+export default Botonflecha; 

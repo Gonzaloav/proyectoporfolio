@@ -1,13 +1,13 @@
 
-import {proporcionfoto} from "../components/proporcionfoto/proporcionfoto.jsx";
+import Proporcionfoto from "../components/proporcionfoto/Proporcionfoto.jsx";
 
 
-const miniaturas= () => {
+const Miniaturas= () => {
     return(
         <div>
-        <proporcionfoto/>
+        <Proporcionfoto/>
         </div>
     );
 }
 
-export default miniaturas;
+export default Miniaturas;
