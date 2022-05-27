@@ -34,4 +34,4 @@ export function botonflecha() {
 
 }
 
-export default boton
+export default botonflecha; 

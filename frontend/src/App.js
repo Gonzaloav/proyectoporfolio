@@ -1,19 +1,26 @@
 
-import { useState, useEffect } from "react";
+import react, { useState, useEffect } from "react";
+import { miniaturas } from "../src/views/miniaturas.jsx";
+import {boton} from "./components/botones/boton.jsx";
+import proporcionfoto from "./components/proporcionfoto/proporcionfoto.jsx";
+import './App.css';
 
-import proporcionfoto  from "./components/proporcionfoto/proporcionfoto.mjs";
 
 
 function App() {
 
 
-
-  
-
   return (
+    <>
     <div>
-        
+      <boton/>
+      <miniaturas/>
+      <proporcionfoto/>
+            <div className="fotosinicio">
+            </div>
+              
     </div>
+    </>
   );
 }
 

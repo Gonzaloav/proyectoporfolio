@@ -3,3 +3,8 @@
 width: 1vw;
 height: 1vh;
 }
+
+.fotosinicio{
+    background-image: url(../public/InicioImagenes/paisaje.jpg) ;
+
+}

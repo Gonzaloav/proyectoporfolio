@@ -2,7 +2,7 @@ import React,{useEffect,useState} from "react";
 import peru from "../Imagenes/Inicio/fauna.jpg"  // 34.jpg" ( foto vertical)
 
 
-export function proporcionfoto() {
+ const proporcionfoto= () => {
     
     const [novoWidth,setNovoWidth] = useState(null);
 
@@ -30,9 +30,10 @@ export function proporcionfoto() {
       return (
         <div className="proba">
           <img src = {peru} height = {500} width = {novoWidth}/>
-          {/*<img src = {peru} height = {500} width = {novoWidth}/>*/}
+          
         </div>
       );
 }
+/*  <img src = {peru} height = {500} width = {novoWidth}/>  */
 
-export default proporcionfoto
+export default proporcionfoto;
