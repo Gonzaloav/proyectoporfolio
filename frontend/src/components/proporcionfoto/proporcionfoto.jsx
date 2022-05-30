@@ -4,7 +4,7 @@ import Imagens from "./components/componentsImages";
 import uno34 from "./imagenes/34/1.jpg";
 import dos34 from "./imagenes/34/2.jpg";
 import tres34 from "./imagenes/34/3.jpg";
-import uno34 from "./imagenes/34/4.jpg";
+import cuatro34 from "./imagenes/34/4.jpg";
 // --------------- 4: 3 ------------------------
 import cinco43 from "./imagenes/43/5.jpg";
 import seis43 from "./imagenes/43/6.jpg";
@@ -39,7 +39,7 @@ function Proporcionfoto() {
       console.log(
         " anchura: ",
         anchoWeightPage,
-        imagne134.naturalHeight,
+        imagen134.naturalHeight,
         imagen134.naturalWidth
       );
       console.log(
