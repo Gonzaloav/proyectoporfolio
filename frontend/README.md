@@ -113,4 +113,7 @@ VISTAS.- Galeria.- (onClick, setView)
    14. Enlaces a [google] (
          https://www.escuelafrontend.com/articulos/rutas-react-router6)
       Extructura de rutas. 
-      
+   
+   15. Lectura libros: 
+   en el principio fue la linea de comandos (NEAL STEPHENSON); 
+   La Catedral y el Bazar (Eric S. Raymond);
