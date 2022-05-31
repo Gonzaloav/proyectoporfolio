@@ -24,7 +24,7 @@ const items = [
   },
 ];
 
-const App = (props) => {
+export const Carruselinicio = (props) => {
   // estado para índice seleccionado
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -90,4 +90,4 @@ const App = (props) => {
     </Carousel>
   );
 };
-export default App;
+export default Carruselinicio;
