@@ -4,7 +4,7 @@ import "./App.css";
 //import Barrabotones from "./components/Barrabotones/Barrabotones";
 import HeaderLink from "./components/HeaderLink/HeaderLink";
 import Routers from "./components/Rutas/Routers";
-
+import { PorfolioLink, RoutersPorfolio} from "./components/Porfolio/Porfolio";
 
 
 /** <div style={{
@@ -22,9 +22,9 @@ function App() {
   return (
     <div>
      
-      <HeaderLink/>
-      
-      <Routers/>
+      <PorfolioLink/>
+    
+      <RoutersPorfolio/>
      
     </div>
   );

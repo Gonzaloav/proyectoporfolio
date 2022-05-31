@@ -12,7 +12,6 @@ import siete43 from "./imagenes/43/7.jpg";
 import ocho43 from "./imagenes/43/8.jpg";
 
 function Proporcionfoto() {
-  const [m34H, setM34H] = useState();
   const [new34W, setNew34W] = useState();
   const [new43W, setNew43W] = useState();
   const [newH, setNewH] = useState();

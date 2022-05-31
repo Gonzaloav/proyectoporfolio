@@ -9,6 +9,7 @@ const listaimg = [paisaje, fauna, retrato, conceptual];
 
 export function carruselinicio() {
   setInterval(cambioimagen, 7000);
+  wrapAround = {true}
 }
 
 function cambioimagen() {
@@ -19,7 +20,25 @@ function cambioimagen() {
   if (index == 4) index = 0;
 }
 
-/**
+/**    const Carruselinicio = () => {
+  return (
+      <div>
+    <Carousel wrapAround={true} >
+      <img src="https://i.ibb.co/tBDzFJk/sunset.png" alt='Surf'/>
+      <img src="https://raw.githubusercontent.com/Maitlla/ProyectoFinal/main/src/img/skateCarretera.jpg" alt='Skate' />
+      <img src="https://raw.githubusercontent.com/Maitlla/ProyectoFinal/main/project/chicoSurf4%20-%20copia.jpg" alt='Surf'/>
+      <img src="https://raw.githubusercontent.com/Maitlla/ProyectoFinal/main/src/img/tablasSkate1.jpg" alt='Skate' />
+      <img src="https://raw.githubusercontent.com/Maitlla/ProyectoFinal/main/src/img/underwater.jpg" alt='Surf'/>
+      <img src="https://raw.githubusercontent.com/Maitlla/ProyectoFinal/main/project/peliculas-de-skate.jpg" alt='Skate'/>
+    </Carousel>
+    </div>
+  );
+}
+
+export default Carruselinicio;
+ 
+
+
  *var index = 0;
     var listaimg = ["http://i.imgur.com/1eHivZy.png", "http://images.neopets.com/template_images/acarabackground.gif", "http://i.imgur.com/cji4OHQ.jpg", "http://i.stack.imgur.com/jGlzr.png"];
 $(function() {
