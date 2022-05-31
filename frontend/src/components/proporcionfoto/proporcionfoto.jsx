@@ -21,7 +21,7 @@ function Proporcionfoto() {
   imagen134.src = uno34;
   console.log("url img imagen134.src:  ", imagen134.src);
 
-  let imagen443 = new Imagen();
+  let imagen443 = new Image();
   imagen443.src = "./imagenes/43/4.jpg";
   console.log(" url imagen443.src: ", imagen134.src);
 
