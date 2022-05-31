@@ -59,7 +59,7 @@ const App = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img src={item.src} alt={item.altText}  width = "100%" height="750px" />
+        <img src={item.src} alt={item.altText} width="100%" height="750px" />
         <CarouselCaption
           captionText={item.caption}
           captionHeader={item.caption}
@@ -67,34 +67,27 @@ const App = (props) => {
       </CarouselItem>
     );
   });
-};
 
-// Llamamos al componente Carrusel. 
-    return (
-      <Carousel
+  // Llamamos al componente Carrusel.
+  return (
+    <Carousel activeIndex={activeIndex} next={next} previous={previous}>
+      <CarouselIndicators
+        items={items}
         activeIndex={activeIndex}
-        next={next}
-        previous={previous}
-      >
-        <CarouselIndicators
-          items={items}
-          activeIndex={activeIndex}
-          onClickHandler={goToIndex}
-        />
-        {slides}
-        <CarouselControl
-          direction="prev"
-          directionText="Previous"
-          onClickHandler={previous}
-        />
-        <CarouselControl
-          direction="next"
-          directionText="Next"
-          onClickHandler={next}
-        />
-      </Carousel>
-    );
-  }
-}
-
+        onClickHandler={goToIndex}
+      />
+      {slides}
+      <CarouselControl
+        direction="prev"
+        directionText="Previous"
+        onClickHandler={previous}
+      />
+      <CarouselControl
+        direction="next"
+        directionText="Next"
+        onClickHandler={next}
+      />
+    </Carousel>
+  );
+};
 export default App;
