@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import retrato from "../Imagenes/Inicio/retrato";
-import paisaje from "../Imagenes/Inicio/paisaje.jpg";
-import conceptual from "../Imagenes/Inicio/conceptual.jpg";
-import fauna from "../Imagenes/Inicio/fauna.jpg";
+import retrato from "../imagenes/Inicio/retrato.jpg";
+import paisaje from "../imagenes/Inicio/paisaje.jpg";
+import fauna from "../imgagenes/Inicio/fauna.jpg";
+import conceptual from "../imagenes/Inicio/conceptual.jpg";
 
 const Carouselinicio = (props) => {
   const images = [retrato, paisaje, fauna, conceptual];
