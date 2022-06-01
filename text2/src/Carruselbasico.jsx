@@ -60,7 +60,7 @@ const Carouselinicio = (props) => {
     <>
       {/** (19:40)*/}
 
-      <img height="300px" width="100%" src={selectedImage} alt="paisaje" />
+      <img height="45%" width="65%" src={selectedImage} alt="paisaje" />
 
       <button onClick={previous}> {"<"} </button>
       <button onClick={next}> {">"} </button>
