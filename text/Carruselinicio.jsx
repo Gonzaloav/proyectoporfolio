@@ -28,13 +28,10 @@ export const Carruselinicio = (props) => {
   // estado para índice seleccionado
 
   const [activeIndex, setActiveIndex] = useState(0);
-
   // Para saber si está activada o no la animación.
-
   const [animating, setAnimating] = useState(false);
 
   // método para cambiar a siguiente imagen.
-
   const next = () => {
     if (animating) return;
     const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
@@ -46,12 +43,16 @@ export const Carruselinicio = (props) => {
     const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
     setActiveIndex(newIndex);
   };
+  
   // Para ir a un índice exprecífico.
   const goToIndex = (newIndex) => {
     if (animating) return;
     setActiveIndex(newIndex);
   };
-  // Almacenaremos el código que generaremos por cada una de las imágenes , que  generemos en el carrusel.
+
+  /**  Almacenaremos el código que generaremos por cada una de las imágenes, 
+  que generemos en el carrusel.*/
+ 
   const slides = items.map((item) => {
     return (
       <CarouselItem
