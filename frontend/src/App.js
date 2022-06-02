@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+//import "./App.css";
 //import Miniaturas from "./views/Miniaturas";
 //import Barrabotones from "./components/Barrabotones/Barrabotones";
 import HeaderLink from "./components/HeaderLink/HeaderLink";
@@ -22,9 +22,14 @@ function App() {
   return (
     <div>
      
+      <HeaderLink/>
+      <Routers/>
+    
       <PorfolioLink/>
     
       <RoutersPorfolio/>
+
+
      
     </div>
   );
