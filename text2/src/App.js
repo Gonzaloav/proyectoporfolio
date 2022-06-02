@@ -1,10 +1,12 @@
 import './App.css';
-import Carouselinicio from './Carrusel';
+import Carruselbasico from './Carruselbasico';
+
+
 
 function App() {
   return (
     <>
-      <Carouselinicio/>
+      <Carruselbasico/>
     </>
   );
 }

@@ -4,7 +4,7 @@ import paisaje from "./img/Inicio/paisaje.jpg";
 import fauna from "./img/Inicio/fauna.jpg";
 import conceptual from "./img/Inicio/conceptual.jpg";
 
-const Carouselinicio = (props) => {
+const Carruselbasico = (props) => {
   const images = [retrato, paisaje, fauna, conceptual];
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -55,16 +55,17 @@ const Carouselinicio = (props) => {
     /*console.log('images: ',images)*/
   };
 
-  /*console.log('images[0] : ',images[0])*/
+  /*console.log('images[0] : ',images[0])  (19:40) */
   return (
     <>
-      {/** (19:40)*/}
+      
 
-      <img height="45%" width="65%" src={selectedImage} alt="paisaje" />
+      <button  onClick={previous}> {"<"} </button>
+      
+      <img height="auto" width="90%" src={selectedImage} alt="paisaje" />
 
-      <button onClick={previous}> {"<"} </button>
       <button onClick={next}> {">"} </button>
     </>
   );
 };
-export default Carouselinicio;
+export default Carruselbasico;
