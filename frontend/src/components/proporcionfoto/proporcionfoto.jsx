@@ -68,3 +68,10 @@ function Proporcionfoto() {
   );
 }
 export default Proporcionfoto;
+/**
+ *suma.addEventLinstener (
+    "click", ()=>{
+mostrador.value= parseInt(mostrador.value)+1;
+}
+);
+ */
