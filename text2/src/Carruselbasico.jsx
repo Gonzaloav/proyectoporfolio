@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import retrato from "./img/Inicio/retrato.jpg";
-import paisaje from "./img/Inicio/paisaje.jpg";
-import fauna from "./img/Inicio/fauna.jpg";
-import conceptual from "./img/Inicio/conceptual.jpg";
+import retrato from "./imagenes/Inicio/retrato.jpg";
+import paisaje from "./imagenes/Inicio/paisaje.jpg";
+import fauna from "./imagenes/Inicio/fauna.jpg";
+import conceptual from "./imagenes/Inicio/conceptual.jpg";
 
 const Carruselbasico = (props) => {
   const images = [retrato, paisaje, fauna, conceptual];
