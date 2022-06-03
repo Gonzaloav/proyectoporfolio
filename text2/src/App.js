@@ -1,12 +1,13 @@
-import './App.css';
-import Carruselbasico from './Carruselbasico';
+
+import Miniaturas from "./proporcionfoto/VistaMiniaturas.jsx"
+
 
 
 
 function App() {
   return (
     <>
-      <Carruselbasico/>
+      <Miniaturas/>
     </>
   );
 }

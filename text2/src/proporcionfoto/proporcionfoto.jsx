@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Imagens from "./components/componentsImages";
 // ------------------3 : 4 -------------------
 import uno34 from "./imagenes/34/1.jpg";
 import dos34 from "./imagenes/34/2.jpg";
@@ -10,6 +9,14 @@ import cinco43 from "./imagenes/43/5.jpg";
 import seis43 from "./imagenes/43/6.jpg";
 import siete43 from "./imagenes/43/7.jpg";
 import ocho43 from "./imagenes/43/8.jpg";
+
+/** 
+suma.addEventLinstener (
+  "click", ()=>{
+mostrador.value= parseInt(mostrador.value)+1;
+}
+);*/
+
 
 function Proporcionfoto() {
   const [new34W, setNew34W] = useState();
@@ -68,10 +75,4 @@ function Proporcionfoto() {
   );
 }
 export default Proporcionfoto;
-/**
- *suma.addEventLinstener (
-    "click", ()=>{
-mostrador.value= parseInt(mostrador.value)+1;
-}
-);
- */
+
