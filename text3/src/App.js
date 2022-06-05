@@ -1,9 +1,10 @@
-import Carruselinicio from "./carruselinicio";
+import CarruselBasico from "./Carruselbasico";
+import Carruselinico from "./carruselinicio";
 
 function App() {
   return (
     <>
-      <Carruselinicio />
+      <Carruselinico />
     </>
   );
 }
