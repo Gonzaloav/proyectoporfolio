@@ -41,6 +41,9 @@ const Carruselinico = () => {
 
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
+  // Ocultar componente
+  const [ocultar, setOcultar] = useState(false);
+
   useEffect((props) => {
     const interval = setInterval(() => {
       selectNewImage(selectedIndex, images);
@@ -85,12 +88,15 @@ const Carruselinico = () => {
         conjunto images, y  previous que no es next  y por ello, se le pone false.*/
   const previous = () => {
     selectNewImage(selectedIndex, images, false);
+    setOcultar(true);
     /*console.log('images: ',images)*/
   };
 
   // no se pone false porque voy al siguiente.
+
   const next = () => {
     selectNewImage(selectedIndex, images);
+    setOcultar(true);
     /*console.log('images: ',images)*/
   };
 
@@ -99,8 +105,8 @@ const Carruselinico = () => {
     <>
       <img height="45%" width="65%" src={selectedImage} alt="paisaje" />
 
-      <button onClick={previous}> {"<"} </button>
-      <button onClick={next}> {">"} </button>
+      {ocultar && <button onClick={previous}> {"<"} </button>}
+      {ocultar && <button onClick={next}> {">"} </button>}
     </>
   );
 };
