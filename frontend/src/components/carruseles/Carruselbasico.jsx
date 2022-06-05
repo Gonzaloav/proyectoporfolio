@@ -58,11 +58,10 @@ const Carouselinicio = (props) => {
   /*console.log('images[0] : ',images[0])*/
   return (
     <>
-      {/** (19:40)*/}
+      <button onClick={previous}> {"<"} </button>
 
       <img height="300px" width="400px" src={selectedImage} alt="paisaje" />
 
-      <button onClick={previous}> {"<"} </button>
       <button onClick={next}> {">"} </button>
     </>
   );
