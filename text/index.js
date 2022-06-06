@@ -1,3 +1,12 @@
+
+suma.addEventLinstener (
+  "click", ()=>{
+mostrador.value= parseInt(mostrador.value)+1;
+}
+);
+
+
+
 /**
 // sincrono
 const sizeOf = require('image-size')

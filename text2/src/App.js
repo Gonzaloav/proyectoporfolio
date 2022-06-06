@@ -1,13 +1,12 @@
-
-import Miniaturas from "./proporcionfoto/VistaMiniaturas.jsx"
-
+import React from 'react';
+import VistaMiniaturas from "./proporcionfoto/VistaMiniaturas.jsx"
 
 
 
 function App() {
   return (
     <>
-      <Miniaturas/>
+      <VistaMiniaturas/>
     </>
   );
 }
