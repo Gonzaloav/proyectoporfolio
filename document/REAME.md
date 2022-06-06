@@ -238,3 +238,7 @@ Instalaciones.-
       Mañana 12/5 a las 17:00 conferencia Diseñando código: una intro a patrones de diseño
       https://events.codemotion.com/conferences/online/2022/online-tech-conference-2022-spanish-edition-spring/agenda
    
+   + CSS3.- boton 
+   https://codepen.io/dp_lewis/pen/WNZQzN
+   https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow
+
