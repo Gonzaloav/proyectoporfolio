@@ -1,10 +1,10 @@
-import React, {useState,useEffect} from "react";
+ import React, {useState,useEffect} from "react";
 import Proporcionfoto from "./Proporcionfoto";
 
 
 const VistaMiniaturas= () => {
 
- const [contador, setContador] = useState (0);   
+ const [contador, setContador] = useState (4);   
  
  /*suma.addEventLinstener (
     "click", ()=>{
@@ -12,13 +12,12 @@ const VistaMiniaturas= () => {
   }
   );
 */
-const Suma = () =>{
-    let cont = contador + 1;
-    setContador(cont);
+const Suma = (event) =>{
+  setContador(event.target.value);
 }
  return(
         <div>
-        <input onChange={()=>{Suma()}} type="number" />
+        <input onChange={Suma} value={contador} type="number" min="4"/>
         <Proporcionfoto num={contador}/>
         </div>
     );

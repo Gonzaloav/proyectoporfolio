@@ -41,11 +41,10 @@ function Proporcionfoto(props) {
   useEffect(() => {
     const valores = () => {
       let anchoWeightPage = window.screen.width;
-      let n = 4;
       let _newn = fotos34.length/props.num;
       setNewChange(_newn)
       /** let new34W = (16/9)* imagen134.naturalWidth;*/
-      let _new43W = (16 / 25) * (anchoWeightPage / n);
+      let _new43W = (4 / 3) * (anchoWeightPage / props.num);
       let _newH = (3 / 4) * _new43W;
       let _new34W = (3 / 4) * _newH;
       setNewH(_newH);

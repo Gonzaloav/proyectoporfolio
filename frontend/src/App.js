@@ -5,7 +5,7 @@ import React from "react";
 import HeaderLink from "./components/HeaderLink/HeaderLink";
 import Routers from "./components/Rutas/Routers";
 import { PorfolioLink, RoutersPorfolio} from "./components/Porfolio/Porfolio";
-
+import Carruselinico from "./components/carruseles/carruselinicio";
 
 /** <div style={{
       backgroundImage: "url(/background.jpg)",
@@ -22,12 +22,7 @@ function App() {
   return (
     <div>
      
-      <HeaderLink/>
-      <Routers/>
-    
-      <PorfolioLink/>
-    
-      <RoutersPorfolio/>
+      <Carruselinico/>
 
 
      
