@@ -3,36 +3,7 @@ import retrato from "./imagenes/Inicio/retrato.jpg";
 import paisaje from "./imagenes/Inicio/paisaje.jpg";
 import conceptual from "./imagenes/Inicio/conceptual.jpg";
 import fauna from "./imagenes/Inicio/fauna.jpg";
-// import styled from "styled-components";
 
-//npm install --save styled-components
-/** opacidad para que empiece en negro.  Transition modificación temporal. Pasara de negro a verse. 
-const CarruselImg = styled.img`
-  max-width: 800px;
-  width: auto;
-  height: 100%;
-  opacity: 0;
-  transition: 1s; // modificación temporal
-  &.louded: {
-    opacity: 1;
-  } // pasará de negro a verse
-`;
-
-// centrado, uno al lado del otro, con un poco de margen.
-const CarruselBotonContenedor = styled.div`
-  display: flex;
-  align-content: center;
-  flex-direction: row;
-  marigin-top: 15px;
-`;
-
-const CarruselBoton = styled.button`
-  color: orange;
-  blackground-color: #eb118a;
-  padding: 8px;
-  margin: 0 5 px;
-`;
-*/
 
 const Carruselinico = () => {
   const images = [retrato, paisaje, fauna, conceptual];
