@@ -1,10 +1,9 @@
-import CarruselBasico from "./Carruselbasico";
-import Carruselinico from "./carruselinicio";
+import CarruselFotoAmpliada from "./CarruselFotoAmpliada";
 
 function App() {
   return (
     <>
-      <Carruselinico />
+      <CarruselFotoAmpliada />
     </>
   );
 }
