@@ -242,3 +242,7 @@ Instalaciones.-
    https://codepen.io/dp_lewis/pen/WNZQzN
    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow
 
+   + Menu acordeon
+   https://codepen.io/MrsColombo/pen/mEeQwy
+   
+
