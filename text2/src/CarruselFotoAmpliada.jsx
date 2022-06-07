@@ -1,43 +1,42 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import retrato from "./imagenes/Inicio/retrato.jpg";
 import paisaje from "./imagenes/Inicio/paisaje.jpg";
 import conceptual from "./imagenes/Inicio/conceptual.jpg";
 import fauna from "./imagenes/Inicio/fauna.jpg";
-import styled from "styled-components";  
+import styled from "styled-components";
 //npm install --save styled-components
-
 
 /**centrado, uno al lado del otro, con un poco de margen.*/
 const CarruselContenedor = styled.div`
   display: flex;
   flex-direction: row;
-  flex-row:1;
-  height: 100%;
-  width: 100%;
+  flex-row: 1;
 `;
 
 const Carruselbotonderecho = styled.button`
   background: none;
   position: fixed;
-  min-width: 100%;
-  min-height: 50%;
+  min-width: 80%;
+  min-height: 100%;
   border: none;
   margin-left: 50%;
   user-select: none;
+  cursor: pointer;
 `;
 
 const Carruselbotonizquierdo = styled.button`
 background: none;
 position: fixed;
-min-width: 100%
-min-height: 50%;
+min-width: 80%
+min-height: 100%;
 border: none;
 margin-right: 50%;
 user-select: none;
+cursor: pointer;
 `;
 
 const CarruselFotoAmpliada = () => {
-    const images = [ paisaje, fauna, retrato, conceptual];
+  const images = [paisaje, fauna, retrato, conceptual];
 
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -78,34 +77,26 @@ const CarruselFotoAmpliada = () => {
         conjunto images, y  previous que no es next  y por ello, se le pone false.*/
   const previous = () => {
     selectNewImage(selectedIndex, images, false);
-   
   };
 
   // no se pone false porque voy al siguiente.
   const next = () => {
     selectNewImage(selectedIndex, images);
-   
   };
 
-  
   return (
     <>
+      <CarruselContenedor>
+        <Carruselbotonizquierdo onClick={previous}></Carruselbotonizquierdo>
 
-     <CarruselContenedor>  
+        <img height="65%" width="85%" src={selectedImage} alt="paisaje" />
 
-      <Carruselbotonizquierdo onClick={previous}> {""} </Carruselbotonizquierdo>
-      
-      <img width="90%"  height= "auto" src={selectedImage} />
-
-      <Carruselbotonderecho onClick={next}> {""}  </Carruselbotonderecho>
-
-    </CarruselContenedor> 
-
+        <Carruselbotonderecho onClick={next}> </Carruselbotonderecho>
+      </CarruselContenedor>
     </>
   );
 };
 export default CarruselFotoAmpliada;
-
 
 /** Carruselbotonderecho = 
   background: none.- Lo vuelve transparente.
@@ -117,4 +108,3 @@ export default CarruselFotoAmpliada;
   border: none.- Borde transparente.
   margin-left: 50%.- Margen derecho.
   user-select: none.-  Controla si el usuario puede seleccionar el texto.*/
- 
