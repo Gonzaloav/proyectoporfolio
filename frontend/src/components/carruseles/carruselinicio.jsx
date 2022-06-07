@@ -54,7 +54,7 @@ const Carruselinico = () => {
   /** Creamos un método para simplificar. 2 parámetros, un selectedIndex que va a ser un número y dos una imagen es un strig.    Ponemos una propiedad sin parámetro. (next=true) que nos pregunta si vas al siguiente o al otro.*/
 
   const selectNewImage = (selectedIndex, images, next = true) => {
-    setTimeout(() => {
+
       /** En caso de ir adelante comprobamos next ? ( selectedIndex < images.lenth -1)
  y si no (:)  unificamos las dos condiciones  */
       const condition = next
@@ -81,7 +81,6 @@ const Carruselinico = () => {
         selectedImage,
         setSelectedImage(images[nextIndex])
       );
-    }, 3000);
   };
 
   /**  previous es directamente llamar a  selectNewImage () Pasarle selectedIndex,  
@@ -110,12 +109,10 @@ const Carruselinico = () => {
 export default Carruselinico;
 
 /** TEMPORIZADOR IMAGENES.- useEffect (47 - 52)
- *  Linea 57.- setTimeout(() => {
- *  Linea 84.-   }, 3000);
- *
+ * 
  * OCULTAR BOTON.-  linea 45,"const [ocultar, setOcultar] = useState(false);"
- * linea 91.- " const previous = () => {selectNewImage(selectedIndex, images, false); setOcultar(true);"
- * linea 98.- "const next = () => {selectNewImage(selectedIndex, images); setOcultar(true);"
- * Linea 105.- " {ocultar && <button onClick={previous}> {"<"} </button>}"
- * Linea 106 .- "{ocultar && <button onClick={next}> {">"} </button>}"
- */
+ * linea 90.- " const previous = () => {selectNewImage(selectedIndex, images, false); setOcultar(true);"
+ * linea 97.- "const next = () => {selectNewImage(selectedIndex, images); setOcultar(true);"
+ * Linea 104.- " {ocultar && <button onClick={previous}> {"<"} </button>}"
+ * Linea 105 .- "{ocultar && <button onClick={next}> {">"} </button>}" */
+

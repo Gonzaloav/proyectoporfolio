@@ -25,7 +25,7 @@ const Carruselinico = () => {
   /** Creamos un método para simplificar. 2 parámetros, un selectedIndex que va a ser un número y dos una imagen es un strig.    Ponemos una propiedad sin parámetro. (next=true) que nos pregunta si vas al siguiente o al otro.*/
 
   const selectNewImage = (selectedIndex, images, next = true) => {
-    setTimeout(() => {
+    
       /** En caso de ir adelante comprobamos next ? ( selectedIndex < images.lenth -1)
  y si no (:)  unificamos las dos condiciones  */
       const condition = next
@@ -52,7 +52,7 @@ const Carruselinico = () => {
         selectedImage,
         setSelectedImage(images[nextIndex])
       );
-    }, 3000);
+   
   };
 
   /**  previous es directamente llamar a  selectNewImage () Pasarle selectedIndex,  
