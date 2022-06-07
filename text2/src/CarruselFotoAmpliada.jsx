@@ -14,29 +14,26 @@ const CarruselContenedor = styled.div`
   flex-row:1;
   height: 100%;
   width: 100%;
-  max-width: 100% 
 `;
 
 const Carruselbotonderecho = styled.button`
   background: none;
   position: fixed;
-  min-width: 50%;
-  min-height: 100%;
+  min-width: 100%;
+  min-height: 50%;
   border: none;
   margin-left: 50%;
   user-select: none;
-
 `;
 
 const Carruselbotonizquierdo = styled.button`
 background: none;
 position: fixed;
-min-width: 50%;
-min-height: 100%;
+min-width: 100%
+min-height: 50%;
 border: none;
 margin-right: 50%;
 user-select: none;
-
 `;
 
 const CarruselFotoAmpliada = () => {
@@ -98,7 +95,7 @@ const CarruselFotoAmpliada = () => {
 
       <Carruselbotonizquierdo onClick={previous}> {""} </Carruselbotonizquierdo>
       
-      <img width="100%"  height= "auto" src={selectedImage} />
+      <img width="90%"  height= "auto" src={selectedImage} />
 
       <Carruselbotonderecho onClick={next}> {""}  </Carruselbotonderecho>
 
@@ -110,3 +107,14 @@ const CarruselFotoAmpliada = () => {
 export default CarruselFotoAmpliada;
 
 
+/** Carruselbotonderecho = 
+  background: none.- Lo vuelve transparente.
+  position: fixed.- El elemento es removido del flujo normal del documento, sin 
+                    crearse espacio alguno para el elemento en el esquema de la 
+                    página.
+  min-width: 50%.- Determinar la anchura mínima de un elemento.
+  min-height: 100%.- Determinar la anchura mínima de un elemento.
+  border: none.- Borde transparente.
+  margin-left: 50%.- Margen derecho.
+  user-select: none.-  Controla si el usuario puede seleccionar el texto.*/
+ 
