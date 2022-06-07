@@ -7,19 +7,37 @@ import styled from "styled-components";
 //npm install --save styled-components
 
 
-// centrado, uno al lado del otro, con un poco de margen.
-const CarruselBotonContenedor = styled.div`
+/**centrado, uno al lado del otro, con un poco de margen.*/
+const CarruselContenedor = styled.div`
   display: flex;
-  align-content: center;
   flex-direction: row;
-  marigin-top: 15px;
+  flex-row:1;
+  height: 100%;
+  width: 100%;
+  max-width: 100% 
 `;
 
-const Carruselboton = styled.button`
-  Box-sizing: 50% 
-  
+const Carruselbotonderecho = styled.button`
+  background: none;
+  position: fixed;
+  min-width: 50%;
+  min-height: 100%;
+  border: none;
+  margin-left: 50%;
+  user-select: none;
+
 `;
 
+const Carruselbotonizquierdo = styled.button`
+background: none;
+position: fixed;
+min-width: 50%;
+min-height: 100%;
+border: none;
+margin-right: 50%;
+user-select: none;
+
+`;
 
 const CarruselFotoAmpliada = () => {
     const images = [ paisaje, fauna, retrato, conceptual];
@@ -63,28 +81,28 @@ const CarruselFotoAmpliada = () => {
         conjunto images, y  previous que no es next  y por ello, se le pone false.*/
   const previous = () => {
     selectNewImage(selectedIndex, images, false);
-    /*console.log('images: ',images)*/
+   
   };
 
   // no se pone false porque voy al siguiente.
   const next = () => {
     selectNewImage(selectedIndex, images);
-    /*console.log('images: ',images)*/
+   
   };
 
-  /*console.log('images[0] : ',images[0])  (19:40) */
+  
   return (
     <>
 
-     <CarruselBotonContenedor>  
+     <CarruselContenedor>  
 
-      <button  onClick={previous} margin-left= "50%"> {"<"} </button>
+      <Carruselbotonizquierdo onClick={previous}> {""} </Carruselbotonizquierdo>
       
-      <img height="auto" width="90%" src={selectedImage} />
+      <img width="100%"  height= "auto" src={selectedImage} />
 
-      <button onClick={next} margin-rigth= "50%"> {">"}  </button>
+      <Carruselbotonderecho onClick={next}> {""}  </Carruselbotonderecho>
 
-    </CarruselBotonContenedor> 
+    </CarruselContenedor> 
 
     </>
   );
