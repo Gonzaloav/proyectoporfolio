@@ -241,6 +241,7 @@ Instalaciones.-
    + CSS3.- boton 
    https://codepen.io/dp_lewis/pen/WNZQzN
    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow
+   https://japatonic.com/ar/
 
    + Menu acordeon
    https://codepen.io/MrsColombo/pen/mEeQwy
