@@ -1,9 +1,9 @@
-import CarruselFotoAmpliada from "./CarruselFotoAmpliada";
+import Barrabotones from "./Barrabotones";
 
 function App() {
   return (
     <>
-      <CarruselFotoAmpliada />
+      <Barrabotones />
     </>
   );
 }
