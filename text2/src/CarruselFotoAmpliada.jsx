@@ -33,7 +33,7 @@ background: none;
 position: fixed;
 top:0%;
 left:0%;
-width: 50%
+width: 50%;
 height: 100%;
 border: none;
 user-select: none;
