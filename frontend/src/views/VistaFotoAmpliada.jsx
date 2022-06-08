@@ -1,7 +1,12 @@
 import React from "react";
+import CarruselFotoAmpliada from "../components/carruseles/CarruselFotoAmpliada";
 
-function VistaFotoAmpliada(){
-    return (<>Hola estoy en Vista Fotol</>)
+function VistaFotoAmpliada() {
+  return (
+    <>
+      <CarruselFotoAmpliada />
+    </>
+  );
 }
 
 export default VistaFotoAmpliada;

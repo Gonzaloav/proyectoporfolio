@@ -4,23 +4,20 @@ import paisaje from "./imagenes/Inicio/paisaje.jpg";
 import conceptual from "./imagenes/Inicio/conceptual.jpg";
 import fauna from "./imagenes/Inicio/fauna.jpg";
 import styled from "styled-components";
-//npm install --save styled-components
 
-/**centrado, uno al lado del otro, con un poco de margen.*/
 const CarruselContenedor = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  width:100%;
+  width: 100%;
   height: 100%;
 `;
 
 const Carruselbotonderecho = styled.button`
-  
   background: none;
   position: fixed;
-  bottom:0%;
-  right:0%;
+  bottom: 0%;
+  right: 0%;
   width: 50%;
   height: 100%;
   border: none;
@@ -29,15 +26,15 @@ const Carruselbotonderecho = styled.button`
 `;
 
 const Carruselbotonizquierdo = styled.button`
-background: none;
-position: fixed;
-top:0%;
-left:0%;
-width: 50%;
-height: 100%;
-border: none;
-user-select: none;
-cursor: pointer;
+  background: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 50%;
+  height: 100%;
+  border: none;
+  user-select: none;
+  cursor: pointer;
 `;
 
 const CarruselFotoAmpliada = () => {
@@ -106,10 +103,9 @@ export default CarruselFotoAmpliada;
 /** Carruselbotonderecho = 
   background: none.- Lo vuelve transparente.
   position: fixed.- El elemento es removido del flujo normal del documento, sin 
-                    crearse espacio alguno para el elemento en el esquema de la 
-                    página.
-  min-width: 50%.- Determinar la anchura mínima de un elemento.
-  min-height: 100%.- Determinar la anchura mínima de un elemento.
+                    crearse espacio alguno para el elemento en el esquema de la página.
+  bottom: 0%; margen abajo;       right: 0%; margen derecho; 
+  width: 50%.- Determinar la anchura.       height: 100%.- Determinar la anchura. 
   border: none.- Borde transparente.
-  margin-left: 50%.- Margen derecho.
-  user-select: none.-  Controla si el usuario puede seleccionar el texto.*/
+  user-select: none.-  Controla si el usuario puede seleccionar el texto.
+  cursor: pointer; cursor mano.   */

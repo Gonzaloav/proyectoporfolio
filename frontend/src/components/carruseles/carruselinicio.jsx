@@ -3,36 +3,24 @@ import retrato from "../imagenes/Inicio/retrato.jpg";
 import paisaje from "../imagenes/Inicio/paisaje.jpg";
 import conceptual from "../imagenes/Inicio/conceptual.jpg";
 import fauna from "../imagenes/Inicio/fauna.jpg";
-// import styled from "styled-components";
+import styled from "styled-components";
 
-//npm install --save styled-components
 /** opacidad para que empiece en negro.  Transition modificación temporal. Pasara de negro a verse. 
 const CarruselImg = styled.img`
-  max-width: 800px;
-  width: auto;
-  height: 100%;
   opacity: 0;
-  transition: 1s; // modificación temporal
+  transition: 1s; 
   &.louded: {
     opacity: 1;
-  } // pasará de negro a verse
-`;
+  } 
+`;*/
 
-// centrado, uno al lado del otro, con un poco de margen.
-const CarruselBotonContenedor = styled.div`
+const CarruselContenedor = styled.div`
   display: flex;
+  justify-content: center;
   align-content: center;
-  flex-direction: row;
-  marigin-top: 15px;
+  width: 100%;
+  height: 100%;
 `;
-
-const CarruselBoton = styled.button`
-  color: orange;
-  blackground-color: #eb118a;
-  padding: 8px;
-  margin: 0 5 px;
-`;
-*/
 
 const Carruselinico = () => {
   const images = [retrato, paisaje, fauna, conceptual];
@@ -54,33 +42,32 @@ const Carruselinico = () => {
   /** Creamos un método para simplificar. 2 parámetros, un selectedIndex que va a ser un número y dos una imagen es un strig.    Ponemos una propiedad sin parámetro. (next=true) que nos pregunta si vas al siguiente o al otro.*/
 
   const selectNewImage = (selectedIndex, images, next = true) => {
-
-      /** En caso de ir adelante comprobamos next ? ( selectedIndex < images.lenth -1)
+    /** En caso de ir adelante comprobamos next ? ( selectedIndex < images.lenth -1)
  y si no (:)  unificamos las dos condiciones  */
-      const condition = next
-        ? selectedIndex < images.length - 1
-        : selectedIndex > 0;
+    const condition = next
+      ? selectedIndex < images.length - 1
+      : selectedIndex > 0;
 
-      /** ¿es next? ¿Se cumple la condición?  Hacemos la condición del sigiente index next.
+    /** ¿es next? ¿Se cumple la condición?  Hacemos la condición del sigiente index next.
          * y si no, ponemos la condición del previews (:)  si no, (:) ¿Se cumple la condición?  
          Es como escribir if(next){if(condition){return selectedIndex +1;}else{return 0}}*/
-      const nextIndex = next
-        ? condition
-          ? selectedIndex + 1
-          : 0
-        : condition
-        ? selectedIndex - 1
-        : images.length - 1;
+    const nextIndex = next
+      ? condition
+        ? selectedIndex + 1
+        : 0
+      : condition
+      ? selectedIndex - 1
+      : images.length - 1;
 
-      setSelectedImage(images[nextIndex]);
-      setSelectedIndex(nextIndex);
-      console.log(
-        "nextIndex , selectedIndex ,selectedImage",
-        selectedIndex,
-        nextIndex,
-        selectedImage,
-        setSelectedImage(images[nextIndex])
-      );
+    setSelectedImage(images[nextIndex]);
+    setSelectedIndex(nextIndex);
+    console.log(
+      "nextIndex , selectedIndex ,selectedImage",
+      selectedIndex,
+      nextIndex,
+      selectedImage,
+      setSelectedImage(images[nextIndex])
+    );
   };
 
   /**  previous es directamente llamar a  selectNewImage () Pasarle selectedIndex,  
@@ -99,20 +86,22 @@ const Carruselinico = () => {
 
   return (
     <>
-      <img height="45%" width="65%" src={selectedImage} alt="paisaje" />
+      <CarruselContenedor>
+        {ocultar && <button onClick={previous}> {"<"} </button>}
 
-      {ocultar && <button onClick={previous}> {"<"} </button>}
-      {ocultar && <button onClick={next}> {">"} </button>}
+        <img height="45%" width="65%" src={selectedImage} alt="paisaje" />
+
+        {ocultar && <button onClick={next}> {">"} </button>}
+      </CarruselContenedor>
     </>
   );
 };
 export default Carruselinico;
 
 /** TEMPORIZADOR IMAGENES.- useEffect (47 - 52)
- * 
+ *
  * OCULTAR BOTON.-  linea 45,"const [ocultar, setOcultar] = useState(false);"
  * linea 90.- " const previous = () => {selectNewImage(selectedIndex, images, false); setOcultar(true);"
  * linea 97.- "const next = () => {selectNewImage(selectedIndex, images); setOcultar(true);"
  * Linea 104.- " {ocultar && <button onClick={previous}> {"<"} </button>}"
  * Linea 105 .- "{ocultar && <button onClick={next}> {">"} </button>}" */
-
