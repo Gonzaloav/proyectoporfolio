@@ -1,37 +1,20 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Barrabotones = () => {
-  const backendURL = "http://localhost:3000/api/v0.0/";
-
-  const [porfolio, setPorfolio] = useState([]);
-
-  async function fetchPorfolio() {
-    const response = await fetch(backendURL + "porfolio/");
-    const data = await response.json();
-    setPorfolio(data);
-  }
-
-  useEffect(() => {
-    fetchPorfolio();
-  }, []);
-
   return (
-    <div class="container">
-      <div class="porfolio">
-        <img src="paisaje.jpg" className="logo" alt="Main Logo" />
-        <ul>
-          <li>
-            <Link to="/">Inicio</Link>
-          </li>
-          {porfolio.map((item) => (
-            <li>
-              <Link to={"/profolio/" + item.galeria}>{item.description}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+    <nav>
+      <ul>
+        <h3> Zalo Aller </h3>
+        <Link to="/">Inicio</Link>
+        <Link to="/porfolio/"> Porfolio </Link>
+        <Link to="/sobremi/"> Sobre Mi</Link>
+        <Link to="/contacto/"> Contacto </Link>
+        <Link to="/porfolio/vistaportada/"> VistaPortada</Link>
+        <Link to="/porfolio/vistaminiaturas/"> VistaMiniaturas</Link>
+        <Link to="/porfolio/vistacarrusel/"> VistaCarrusel</Link>
+        <Link to="/porfolio/vistafotoampliada/"> VistaFotoAmpliada </Link>
+      </ul>
+    </nav>
   );
 };
 
