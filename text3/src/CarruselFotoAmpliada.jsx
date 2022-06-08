@@ -9,18 +9,20 @@ import styled from "styled-components";
 /**centrado, uno al lado del otro, con un poco de margen.*/
 const CarruselContenedor = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-row: 1;
-  cursor: pointer;
+  justify-content: center;
+  align-content: center;
+  width:100%;
+  height: 100%;
 `;
 
 const Carruselbotonderecho = styled.button`
   background: none;
   position: fixed;
-  min-width: 80%;
-  min-height: 100%;
+  bottom:0%;
+  right:0%;
+  width: 50%;
+  height: 100%;
   border: none;
-  margin-left: 50%;
   user-select: none;
   cursor: pointer;
 `;
@@ -28,11 +30,13 @@ const Carruselbotonderecho = styled.button`
 const Carruselbotonizquierdo = styled.button`
 background: none;
 position: fixed;
-min-width: 80%
-min-height: 100%;
+top:0%;
+left:0%;
+width: 50%;
+height: 100%;
 border: none;
-margin-right: 50%;
 user-select: none;
+cursor: pointer;
 `;
 
 const CarruselFotoAmpliada = () => {
