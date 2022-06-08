@@ -170,80 +170,82 @@ PUT.- Articulos de fotografía / Porfolio / (500 - 400 - 201)
 
 DELET.- Porfolio / libro visitas / Articulos de fotografìa (500 - 400 -201)
 
--------------------------
+---
+
 VISTAS.- Galeria.- (onClick, setView)
 
-   1. Miniaturas = onClik, setcurrentPhoto, setView = Foto. 
-   2. Carrusel =   onClik, setcurrentPhoto, setView = Foto.
-   3. Fotos =     incluye descripción.
-   4. Portada =   incluye descripción. 
-   5.    . view = Miniaturas - Carrusel - Fotos. 
-         . showdescription = true / false. 
-         . photos = [{}]
-         . currentPhoto = 1. 
+1.  Miniaturas = onClik, setcurrentPhoto, setView = Foto.
+2.  Carrusel = onClik, setcurrentPhoto, setView = Foto.
+3.  Fotos = incluye descripción.
+4.  Portada = incluye descripción.
+5.  . view = Miniaturas - Carrusel - Fotos.
+    . showdescription = true / false.
+    . photos = [{}]
+    . currentPhoto = 1.
 
-   6. Enlaces a [google] (
-         https://techclub.tajamar.es/componentes-libres-en-react-para-imagenes-y-video/)
-      web para carrusel general.
-    7. Enlaces a [google] (
-         https://react-bootstrap.github.io/components/carousel/)
-      componente carrusel. 
-    8. Enlaces a [google] (
-         http://neptunian.github.io/react-photo-gallery/)
-      React Photo Gallery
-   9. Enlaces a [google] (
-      https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/sizes)
-      Tamaños imagenes javascript
+6.  Enlaces a [google] (
+    https://techclub.tajamar.es/componentes-libres-en-react-para-imagenes-y-video/)
+    web para carrusel general.
+7.  Enlaces a [google] (
+    https://react-bootstrap.github.io/components/carousel/)
+    componente carrusel.
+8.  Enlaces a [google] (
+    http://neptunian.github.io/react-photo-gallery/)
+    React Photo Gallery
+9.  Enlaces a [google] (
+    https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/sizes)
+    Tamaños imagenes javascript
 
-   10. Enlaces a [google] (
-      https://expressjs.com/es/starter/static-files.html)
+10. Enlaces a [google] (
+    https://expressjs.com/es/starter/static-files.html)
 
-   11. Enlaces a [google] (
-      https://www.npmjs.com/package/mmmagic)
-      Ver si es una imagen // npm install mmmagic
-   
-   12. Enlaces a [google] (
-      https://www.npmjs.com/package/image-size?Cachedget)
-      Para saber el tamaño de la imagen // npm install image-size --save
+11. Enlaces a [google] (
+    https://www.npmjs.com/package/mmmagic)
+    Ver si es una imagen // npm install mmmagic
 
-   13. Enlaces a [google] (
-         https://imagemagick.org/index.php)
-      Editor de imagenes completo desde el código. 
+12. Enlaces a [google] (
+    https://www.npmjs.com/package/image-size?Cachedget)
+    Para saber el tamaño de la imagen // npm install image-size --save
 
-   14. Enlaces a [google] (
-         https://www.escuelafrontend.com/articulos/rutas-react-router6)
-      Extructura de rutas. 
----------------------------
+13. Enlaces a [google] (
+    https://imagemagick.org/index.php)
+    Editor de imagenes completo desde el código.
+
+14. Enlaces a [google] (
+    https://www.escuelafrontend.com/articulos/rutas-react-router6)
+    Extructura de rutas.
+
+---
 
 Instalaciones.-
-   1. npm install sqlite3 (backend).
-   2. npm install jsonschema (backend).
-   3. npm install react-router-dom (frontend).
-   4. npx create-react-app . (frontend).
-   5. npm init -y (backend).
-   6. npm install express (backend).
-   7. npm install image-size --save.
 
-   ----------------------------------
+1.  npm install sqlite3 (backend).
+2.  npm install jsonschema (backend).
+3.  npm install react-router-dom (frontend).
+4.  npx create-react-app . (frontend).
+5.  npm init -y (backend).
+6.  npm install express (backend).
+7.  npm install image-size --save.
+8.  npm install --save styled-components (frontend).
 
-   + GeekFORCE: Cómo conseguir el trabajo que quieres en IT
-      https://www.youtube.com/watch?v=8cIe4q8dgkM&t=2626s
+---
 
-   + Chequear patrones en javascript
-      https://jstherightway.org/es-es/
+- GeekFORCE: Cómo conseguir el trabajo que quieres en IT
+  https://www.youtube.com/watch?v=8cIe4q8dgkM&t=2626s
 
-   + eventos relacionados con programar
-      https://events.codemotion.com/conferences/online/2022/online-tech-conference-2022-spanish-edition-spring
+- Chequear patrones en javascript
+  https://jstherightway.org/es-es/
 
-      Mañana 12/5 a las 17:00 conferencia Diseñando código: una intro a patrones de diseño
-      https://events.codemotion.com/conferences/online/2022/online-tech-conference-2022-spanish-edition-spring/agenda
-   
-   + CSS3.- boton 
-   https://codepen.io/dp_lewis/pen/WNZQzN
-   https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow
-   https://japatonic.com/ar/
+- eventos relacionados con programar
+  https://events.codemotion.com/conferences/online/2022/online-tech-conference-2022-spanish-edition-spring
 
-   + Menu acordeon
-   https://codepen.io/MrsColombo/pen/mEeQwy
-   
+  Mañana 12/5 a las 17:00 conferencia Diseñando código: una intro a patrones de diseño
+  https://events.codemotion.com/conferences/online/2022/online-tech-conference-2022-spanish-edition-spring/agenda
 
+- CSS3.- boton
+  https://codepen.io/dp_lewis/pen/WNZQzN
+  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow
+  https://japatonic.com/ar/
+
+- Menu acordeon
+  https://codepen.io/MrsColombo/pen/mEeQwy
