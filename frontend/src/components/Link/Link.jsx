@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export const InicioLink = () => {
+export const PrincipalLink = () => {
   return (
     <div>
       <header>
