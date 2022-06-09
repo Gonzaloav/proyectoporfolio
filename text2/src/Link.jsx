@@ -4,14 +4,12 @@ import { Link } from "react-router-dom";
 export const PrincipalLink = () => {
   return (
     <div >
-      <header>
         <nav>
           <Link to="/"> Inicio </Link>
           <Link to="/porfolio/"> Porfolio </Link>
           <Link to="/sobremi/"> Sobre Mi</Link>
           <Link to="/contacto/"> Contacto </Link>
         </nav>
-      </header>
     </div>
   );
 };
@@ -19,7 +17,6 @@ export const PrincipalLink = () => {
 export const PorfolioLink = () => {
   return (
     <div>
-      <header>
         <nav>
           <h3>Zalo Aller</h3>
           <Link to="/porfolio/"> Porfolio</Link>
@@ -28,7 +25,6 @@ export const PorfolioLink = () => {
           <Link to="/porfolio/vistacarrusel/"> VistaCarrusel</Link>
           <Link to="/porfolio/vistafotoampliada/"> VistaFotoAmpliada </Link>
         </nav>
-      </header>
     </div>
   );
 };

@@ -8,8 +8,7 @@ import VistaInicio from './VistaInicio.jsx';
 function App() {
   return (
     <>
-    <PrincipalLink/>
-    <RoutersInicio/>
+        <VistaInicio/>
     </>
   );
 }

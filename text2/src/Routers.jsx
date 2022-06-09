@@ -1,9 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-
-
-
 export const RoutersInicio = () => {
   const Inicio = () => <h3> Inicio </h3>;
   const Porfolio = () => <h3> Porfolio </h3>;
