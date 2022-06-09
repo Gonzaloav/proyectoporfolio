@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-export const HeaderLink = () => {
+export const InicioLink = () => {
   return (
-    <div className="header">
+    <div>
       <header>
         <nav>
           <h3>Zalo Aller</h3>
@@ -18,7 +18,7 @@ export const HeaderLink = () => {
 
 export const PorfolioLink = () => {
   return (
-    <div className="porfolioLink">
+    <div>
       <header>
         <nav>
           <h3>Zalo Aller</h3>

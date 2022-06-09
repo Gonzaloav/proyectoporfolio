@@ -89,7 +89,7 @@ const Carruselinico = () => {
       <CarruselContenedor>  
         {ocultar && <button onClick={previous}> {"<"} </button>}
 
-        <img height="45%" width="65%" src={selectedImage} alt="paisaje" />
+        <img height="auto" width="90%" src={selectedImage} />
 
         {ocultar && <button onClick={next}> {">"} </button>}
       </CarruselContenedor>
