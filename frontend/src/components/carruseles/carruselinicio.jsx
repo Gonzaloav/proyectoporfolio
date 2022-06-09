@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import retrato from "../imagenes/Inicio/retrato.jpg";
-import paisaje from "../imagenes/Inicio/paisaje.jpg";
-import conceptual from "../imagenes/Inicio/conceptual.jpg";
-import fauna from "../imagenes/Inicio/fauna.jpg";
+import retrato from "../Imagenes/Inicio/retrato.jpg";
+import paisaje from "../Imagenes/Inicio/paisaje.jpg";
+import conceptual from "../Imagenes/Inicio/conceptual.jpg";
+import fauna from "../Imagenes/Inicio/fauna.jpg";
 import styled from "styled-components";
 
 /** opacidad para que empiece en negro.  Transition modificación temporal. Pasara de negro a verse. 
@@ -20,7 +20,7 @@ const CarruselContenedor = styled.div`
   align-content: center;
   width: 100%;
   height: 100%;
-`;
+  `;
 
 const Carruselinico = () => {
   const images = [retrato, paisaje, fauna, conceptual];
@@ -86,7 +86,7 @@ const Carruselinico = () => {
 
   return (
     <>
-      <CarruselContenedor>
+      <CarruselContenedor>  
         {ocultar && <button onClick={previous}> {"<"} </button>}
 
         <img height="45%" width="65%" src={selectedImage} alt="paisaje" />
