@@ -1,17 +1,15 @@
 import React from 'react';
-import Carruselbasico from './Carruselbasico.jsx';
-import Carruselinicio from './carruselinicio.jsx';
-import VistaMiniaturas from "./proporcionfoto/VistaMiniaturas.jsx"
-import CarruselFotoAmpliada from './CarruselFotoAmpliada.jsx';
-import "./App.css";
+
+import { PrincipalLink } from './Link.jsx';
+import { RoutersInicio } from './Routers.jsx';
+
 import VistaInicio from './VistaInicio.jsx';
 
 function App() {
   return (
     <>
-    <VistaInicio/>
-
-   
+    <PrincipalLink/>
+    <RoutersInicio/>
     </>
   );
 }

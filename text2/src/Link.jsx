@@ -1,11 +1,11 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
-export const HeaderLink = () => {
+export const PrincipalLink = () => {
   return (
-    <div className="header">
+    <div >
       <header>
         <nav>
-          <h3>Zalo Aller</h3>
           <Link to="/"> Inicio </Link>
           <Link to="/porfolio/"> Porfolio </Link>
           <Link to="/sobremi/"> Sobre Mi</Link>
@@ -18,7 +18,7 @@ export const HeaderLink = () => {
 
 export const PorfolioLink = () => {
   return (
-    <div className="porfolioLink">
+    <div>
       <header>
         <nav>
           <h3>Zalo Aller</h3>

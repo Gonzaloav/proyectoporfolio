@@ -1,4 +1,8 @@
+import React from "react";
 import { Route, Routes } from "react-router-dom";
+
+
+
 
 export const RoutersInicio = () => {
   const Inicio = () => <h3> Inicio </h3>;
@@ -37,15 +41,9 @@ export const RoutersPorfolio = () => {
         <Route index element={<Porfolio />} />
 
         <Route path="/porfolio/vistaportada/" element={<VistaPortada />} />
-        <Route
-          path="/porfolio/vistaminiaturas/"
-          element={<VistaMiniaturas />}
-        />
+        <Route path="/porfolio/vistaminiaturas/" element={<VistaMiniaturas />}/>
         <Route path="/porfolio/vistacarrusel/" element={<VistaCarrusel />} />
-        <Route
-          path="/porfolio/vistafotoampliada/"
-          element={<VistaFotoAmpliada />}
-        />
+        <Route path="/porfolio/vistafotoampliada/" element={<VistaFotoAmpliada />} />
 
         <Route path="*" element={<h1>404</h1>} />
       </Routes>
