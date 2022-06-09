@@ -94,7 +94,7 @@ const CarruselFotoAmpliada = () => {
       <CarruselContenedor>
         <Carruselbotonizquierdo onClick={previous}></Carruselbotonizquierdo>
 
-        <img height="65%" width="85%" src={selectedImage} alt="paisaje" />
+        <img height="65%" width="85%" src={selectedImage}/>
 
         <Carruselbotonderecho onClick={next}> </Carruselbotonderecho>
       </CarruselContenedor>
