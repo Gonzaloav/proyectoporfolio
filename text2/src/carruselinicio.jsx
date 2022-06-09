@@ -3,6 +3,18 @@ import retrato from "./imagenes/Inicio/retrato.jpg";
 import paisaje from "./imagenes/Inicio/paisaje.jpg";
 import conceptual from "./imagenes/Inicio/conceptual.jpg";
 import fauna from "./imagenes/Inicio/fauna.jpg";
+import styled from "styled-components";
+
+
+/**centrado, uno al lado del otro, con un poco de margen.*/
+const CarruselContenedor = styled.div`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width:100%;
+  height: 100%;
+`;
+
 
 
 const Carruselinico = () => {
@@ -74,10 +86,14 @@ const Carruselinico = () => {
   /*console.log('images[0] : ',images[0])*/
   return (
     <>
-      <img height="45%" width="65%" src={selectedImage} alt="paisaje" />
+    <CarruselContenedor> 
+
+      <img height="65%" width="85%" src={selectedImage} alt="paisaje" />
 
       {ocultar && <button onClick={previous}> {"<"} </button>}
       {ocultar && <button onClick={next}> {">"} </button>}
+
+    </CarruselContenedor>
     </>
   );
 };

@@ -4,7 +4,7 @@ import paisaje from "./imagenes/Inicio/paisaje.jpg";
 import conceptual from "./imagenes/Inicio/conceptual.jpg";
 import fauna from "./imagenes/Inicio/fauna.jpg";
 import styled from "styled-components";
-//npm install --save styled-components
+
 
 /**centrado, uno al lado del otro, con un poco de margen.*/
 const CarruselContenedor = styled.div`

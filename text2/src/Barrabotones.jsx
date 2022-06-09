@@ -1,9 +1,8 @@
+import React from "react";
 import Link from "react-router-dom";
 import styled from "styled-components";
 
-/** font-family: Vladimir Script;
-  font-size: 48pt;
-  font-family: Kunstler Script;  */
+
 
 const Minombre = styled.h3`
   font-family: Vladimir Script;
@@ -15,7 +14,7 @@ const NombreLinks = styled.div`
   font-size: 48pt;
 `;
 
-const Barrabotones = () => {
+ const Barrabotones = () => {
   return (
     <nav>
       <Minombre> Zalo Aller </Minombre>
@@ -32,5 +31,6 @@ const Barrabotones = () => {
     </nav>
   );
 };
+
 
 export default Barrabotones;
