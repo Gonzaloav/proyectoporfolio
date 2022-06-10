@@ -1,14 +1,10 @@
 import React from 'react';
-
-import { PrincipalLink } from './Link.jsx';
-import { RoutersInicio } from './Routers.jsx';
-
-import VistaInicio from './VistaInicio.jsx';
+import Miniaturas from './Miniaturas.jsx';
 
 function App() {
   return (
     <>
-        <VistaInicio/>
+        <Miniaturas/>
     </>
   );
 }

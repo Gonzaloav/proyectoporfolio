@@ -1,14 +1,14 @@
 import React from "react";
 // ------------------3 : 4 -------------------
-import cinco34 from "../imagenes/34/1.jpg";
-import seis34 from "../imagenes/34/2.jpg";
-import siete34 from "../imagenes/34/3.jpg";
-import ocho34 from "../imagenes/34/4.jpg";
+import cinco34 from "./imagenes/34/5.jpg";
+import seis34 from "./imagenes/34/6.jpg";
+import siete34 from "./imagenes/34/7.jpg";
+import ocho34 from "./imagenes/34/8.jpg";
 // --------------- 4: 3 ------------------------
-import uno43 from "../imagenes/43/5.jpg";
-import dos43 from "../imagenes/43/6.jpg";
-import tres43 from "../imagenes/43/7.jpg";
-import cuatro43 from "../imagenes/43/8.jpg";
+import uno43 from "./imagenes/43/1.jpg";
+import dos43 from "./imagenes/43/2.jpg";
+import tres43 from "./imagenes/43/3.jpg";
+import cuatro43 from "./imagenes/43/4.jpg";
 
 import styled from "styled-components";
 
@@ -41,53 +41,54 @@ border-radius: 5px;
 `;
 
 const Miniaturas = () => {
-    const img = [uno43,dos43,tres43,cuatro43,cinco34,seis34,siete34,ocho34];
+    const imagenesprueba = [uno43,dos43,tres43,cuatro43,cinco34,seis34,siete34,ocho34];
     return (
       <> 
 <Body> 
     <ContenedorMiniatura > 
 
         <Wrapper43> 
-            < img src = "cuatro43"/>
+        <Img>  < img src = "cuatro43"/>  </Img>
         </Wrapper43>
 
         <Wrapper43>
-            <img src="uno43"/>
+        <Img> <img src="uno43"/> </Img>
         </Wrapper43>
 
         <Wrapper43>
-            <img src="dos43"/>
+        <Img> <img src="dos43"/>  </Img>
         </Wrapper43>
 
         <Wrapper34>
-            <img src="seis34"/>
+        <Img> <img src="seis34"/>  </Img>
         </Wrapper34>
 
         <Wrapper34>
-            <img src="cinco34"/>
+        <Img> <img src="cinco34"/>  </Img>
         </Wrapper34>
 
     </ContenedorMiniatura>
    
     <ContenedorMiniatura > 
-        <Wrapper34>
-            <img src="seis34"/>
-        <Wrapper34>
 
         <Wrapper34>
-            <img src="cinco34"/>
+           <Img>  <img src="seis34"/> </Img>
+        </Wrapper34>
+
+        <Wrapper34>
+        <Img> <img src="cinco34"/>  </Img>
         </Wrapper34>
 
         <Wrapper43>
-            <img src="uno43"/>
+        <Img> <img src="uno43"/>  </Img>
         </Wrapper43>
 
         <Wrapper43>
-            <img src="dos43"/>
+        <Img>  <img src="dos43"/>  </Img>
         </Wrapper43>
 
         <Wrapper43>
-            <img src="cuatro43"/>
+        <Img> <img src="cuatro43"/> </Img>
         </Wrapper43>
 
     </ContenedorMiniatura > 
@@ -95,11 +96,11 @@ const Miniaturas = () => {
     <ContenedorMiniatura > 
 
     <Wrapper43>
-            <img src="tres43"/>
+    <Img> <img src="tres43"/> </Img>
     </Wrapper43>
 
     <Wrapper43>
-            <img src="uno43"/>
+    <Img>   <img src="uno43"/> </Img>
     </Wrapper43>
 
     </ContenedorMiniatura > 
