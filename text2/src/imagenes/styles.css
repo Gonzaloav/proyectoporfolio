@@ -1,0 +1,28 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper {
+    margin: 2px;
+}
+
+.wrapper34 {
+    width:  calc(20% * 3 / 4);
+}
+
+.wrapper43 {
+    width:  calc(20% * 4 / 3);
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
