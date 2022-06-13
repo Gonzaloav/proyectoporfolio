@@ -1,10 +1,11 @@
 import React from 'react';
-import Miniaturas from './Miniaturas.jsx';
+
+import VistaInicio from './VistaInicio.jsx';
 
 function App() {
   return (
     <>
-        <Miniaturas/>
+        <VistaInicio/>
     </>
   );
 }

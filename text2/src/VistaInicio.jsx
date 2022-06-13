@@ -8,7 +8,7 @@ const VistaInicio = () => {
   return (
     <>
     <nav>
-        <Barrabotones/> 
+        <Barrabotones/>
     </nav>  
     <main> 
         <Carruselinicio/>
