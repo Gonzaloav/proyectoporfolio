@@ -1,35 +1,43 @@
-import Link from "react-router-dom";
+import React from "react";
 import styled from "styled-components";
+import { PrincipalLink } from "./Link";
 
-/** font-family: Vladimir Script;
-  font-size: 48pt;
-  font-family: Kunstler Script;  */
+const Navnombre = styled.nav`
+  background-color: salmon;
+  display: flex;
+  justify-content: left;
+  align-content: left;
+  width: 100%;
+`;
 
-const Minombre = styled.h3`
+const Minombre = styled.p`
+  top: 0%;
+  left: 0%;
+  justify-content: space-between;
   font-family: Vladimir Script;
-  font-size: 48pt;
+  align-items: start;
+  font-size: 36pt;
 `;
 
 const NombreLinks = styled.div`
+  justify-content: space-between;
+  top: 0%;
+  right: 0%;
   font-family: Kunstler Script;
-  font-size: 48pt;
+  align-items: start;
+  font-size: 24pt;
 `;
 
 const Barrabotones = () => {
   return (
-    <nav>
-      <Minombre> Zalo Aller </Minombre>
-      <NombreLinks>
-        <Link to="/">Inicio</Link>
-        <Link to="/porfolio/"> Porfolio </Link>
-        <Link to="/sobremi/"> Sobre Mi</Link>
-        <Link to="/contacto/"> Contacto </Link>
-        <Link to="/porfolio/vistaportada/"> VistaPortada</Link>
-        <Link to="/porfolio/vistaminiaturas/"> VistaMiniaturas</Link>
-        <Link to="/porfolio/vistacarrusel/"> VistaCarrusel</Link>
-        <Link to="/porfolio/vistafotoampliada/"> VistaFotoAmpliada </Link>
-      </NombreLinks>
-    </nav>
+    <>
+      <Navnombre>
+        <Minombre> Zalo Aller </Minombre>
+        <NombreLinks>
+          <PrincipalLink />
+        </NombreLinks>
+      </Navnombre>
+    </>
   );
 };
 

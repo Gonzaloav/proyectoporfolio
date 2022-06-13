@@ -3,9 +3,8 @@ import retrato from "./imagenes/Inicio/retrato.jpg";
 import paisaje from "./imagenes/Inicio/paisaje.jpg";
 import conceptual from "./imagenes/Inicio/conceptual.jpg";
 import fauna from "./imagenes/Inicio/fauna.jpg";
-// import styled from "styled-components";
+import styled from "styled-components";
 
-//npm install --save styled-components
 /** opacidad para que empiece en negro.  Transition modificación temporal. Pasara de negro a verse. 
 const CarruselImg = styled.img`
   max-width: 800px;
@@ -14,25 +13,16 @@ const CarruselImg = styled.img`
   opacity: 0;
   transition: 1s; // modificación temporal
   &.louded: {
-    opacity: 1;
-  } // pasará de negro a verse
-`;
+    opacity: 1;    }   `;   */
 
-// centrado, uno al lado del otro, con un poco de margen.
-const CarruselBotonContenedor = styled.div`
+const CarruselContenedor = styled.div`
   display: flex;
+  background-color: black;
+  justify-content: center;
   align-content: center;
-  flex-direction: row;
-  marigin-top: 15px;
+  width: 100%;
+  height: 100%;
 `;
-
-const CarruselBoton = styled.button`
-  color: orange;
-  blackground-color: #eb118a;
-  padding: 8px;
-  margin: 0 5 px;
-`;
-*/
 
 const Carruselinico = () => {
   const images = [retrato, paisaje, fauna, conceptual];
@@ -89,24 +79,22 @@ const Carruselinico = () => {
   const previous = () => {
     selectNewImage(selectedIndex, images, false);
     setOcultar(true);
-    /*console.log('images: ',images)*/
   };
 
   // no se pone false porque voy al siguiente.
-
   const next = () => {
     selectNewImage(selectedIndex, images);
     setOcultar(true);
-    /*console.log('images: ',images)*/
   };
 
-  /*console.log('images[0] : ',images[0])*/
   return (
     <>
-      <img height="45%" width="65%" src={selectedImage} alt="paisaje" />
+      <CarruselContenedor>
+        <img height="auto" width="65%" src={selectedImage} alt="paisaje" />
 
-      {ocultar && <button onClick={previous}> {"<"} </button>}
-      {ocultar && <button onClick={next}> {">"} </button>}
+        {ocultar && <button onClick={previous}> {"<"} </button>}
+        {ocultar && <button onClick={next}> {">"} </button>}
+      </CarruselContenedor>
     </>
   );
 };
