@@ -32,6 +32,7 @@ try {
     const jsonParser = express.json ();
 
     //app.use (requestLog);
+    app.use("/images/",express.static("src/imagenes/"))
 
                 // Tabla Usuario
     app.get (PATH_FREFIX + "/users/", getAllUsersController );
@@ -63,7 +64,7 @@ try {
     
     app.use (errorsHandler);
 
-    app.listen (process.env.PORT || 3000, ()=>{
+    app.listen (process.env.PORT || 4000, ()=>{
         console.log ("Express funcionando...");
     });
 }   catch (err) {

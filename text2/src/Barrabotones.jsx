@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { PrincipalLink } from "./Link";
 
 const Navnombre = styled.nav`
-  background-color: salmon;
+  background-color: #08564f;
   display: flex;
   justify-content: left;
   align-content: left;

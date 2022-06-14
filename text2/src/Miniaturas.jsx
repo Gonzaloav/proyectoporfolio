@@ -1,113 +1,50 @@
 import React from "react";
-// ------------------3 : 4 -------------------
-import cinco34 from "./imagenes/34/5.jpg";
-import seis34 from "./imagenes/34/6.jpg";
-import siete34 from "./imagenes/34/7.jpg";
-import ocho34 from "./imagenes/34/8.jpg";
-// --------------- 4: 3 ------------------------
-import uno43 from "./imagenes/43/1.jpg";
-import dos43 from "./imagenes/43/2.jpg";
-import tres43 from "./imagenes/43/3.jpg";
-import cuatro43 from "./imagenes/43/4.jpg";
+import { useEffect } from "react";
+import FotosMiniatura from "./FotosMiniatura";
 
-import styled from "styled-components";
-
-const Body = styled.div`
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    margin: 0px;
-`;
-
-const ContenedorMiniatura = styled.div`
-display: flex;
-flex-direction: row;
-`;
-
-const Wrapper34 = styled.div`
-width:  calc(20% * 3 / 4);
-margin: 2px;
-`;
-
-const Wrapper43 = styled.div`
-width:  calc(20% * 4 / 3);
-margin: 2px;
-`;
-
-const Img = styled.img`
-height: 100%;
-width: 100%;
-border-radius: 5px;
-`;
-
-const Miniaturas = () => {
-    const imagenesprueba = [uno43,dos43,tres43,cuatro43,cinco34,seis34,siete34,ocho34];
-    return (
-      <> 
-<Body> 
-    <ContenedorMiniatura > 
-
-        <Wrapper43> 
-        <Img>  < img src = {cuatro43}/>  </Img>
-        </Wrapper43>
-
-        <Wrapper43>
-        <Img> <img src={uno43}/> </Img>
-        </Wrapper43>
-
-        <Wrapper43>
-        <Img> <img src={dos43}/>  </Img>
-        </Wrapper43>
-
-        <Wrapper34>
-        <Img> <img src={seis34}/>  </Img>
-        </Wrapper34>
-
-        <Wrapper34>
-        <Img> <img src={cinco34}/>  </Img>
-        </Wrapper34>
-
-    </ContenedorMiniatura>
-   
-    <ContenedorMiniatura > 
-
-        <Wrapper34>
-           <Img>  <img src={seis34}/> </Img>
-        </Wrapper34>
-
-        <Wrapper34>
-        <Img> <img src={cinco34}/>  </Img>
-        </Wrapper34>
-
-        <Wrapper43>
-        <Img> <img src={uno43}/>  </Img>
-        </Wrapper43>
-
-        <Wrapper43>
-        <Img>  <img src={dos43}/>  </Img>
-        </Wrapper43>
-
-        <Wrapper43>
-        <Img> <img src={cuatro43}/> </Img>
-        </Wrapper43>
-
-    </ContenedorMiniatura > 
-
-    <ContenedorMiniatura > 
-
-    <Wrapper43>
-    <Img> <img src={tres43}/> </Img>
-    </Wrapper43>
-
-    <Wrapper43>
-    <Img>   <img src={uno43}/> </Img>
-    </Wrapper43>
-
-    </ContenedorMiniatura > 
-</Body>
-
+const Miniaturas = (props) => {
+    const images34 =[
+        {name:"5.jpg",
+        style: "Wrapper34"},
+        {name:"6.jpg",
+        style: "Wrapper34"},
+        {name:"7.jpg",
+        style: "Wrapper34"},
+        {name:"8.jpg",
+        style: "Wrapper34"},
+        {name:"1.jpg",
+        style: "Wrapper43"},
+        {name:"2.jpg",
+        style: "Wrapper43"},
+        {name:"3.jpg",
+        style: "Wrapper43"},
+        {name:"4.jpg",
+        style: "Wrapper43"}
+    ]
+    useEffect(()=>{
+    for (let i = 0; i < images34.length; i=i+3) {
+        const fila = [];
+        for ( let foto=0; foto< 3; foto++){
+        fila.push (images34[i+foto]);
+        }
+        console.log(fila)
+        
+    }},[])
+     /*for (let i = 0 ; i < fotos.length; i=i+2) {
+        let fila = []
+        console.log("fila");
+        for ( let j=0 ; j < 2; j++) {
+            fila.push(fotos[i+j]);
+        }
+        console.log("componente", fila);*/
+    
+     return (
+    <> 
+{/*     
+        <FotosMiniatura images={images34}/> */}
+        <p>hola</p>
     </>
     );
   };
-  
-  export default Miniaturas;
+
+export default Miniaturas;
