@@ -1,34 +1,43 @@
 import React from "react";
-// import Link from "react-router-dom";
 import styled from "styled-components";
-import { RoutersInicio, RoutersPorfolio } from "./Routers";
-import { PrincipalLink, PorfolioLink } from "./Link";
+import { PrincipalLink } from "./Link";
 
-const Minombre = styled.h3`
+const Navnombre = styled.nav`
+  background-color: salmon;
+  display: flex;
+  justify-content: left;
+  align-content: left;
+  width: 100%;
+`;
+
+const Minombre = styled.p`
+  top: 0%;
+  left: 0%;
+  justify-content: space-between;
   font-family: Vladimir Script;
-  font-size: 48pt;
+  align-items: start;
+  font-size: 36pt;
 `;
 
 const NombreLinks = styled.div`
+  justify-content: space-between;
+  top: 0%;
+  right: 0%;
   font-family: Kunstler Script;
-  font-size: 48pt;
+  align-items: start;
+  font-size: 24pt;
 `;
 
- const Barrabotones = () => {
+const Barrabotones = () => {
   return (
-    <> 
-    <nav>
-      <Minombre> Zalo Aller </Minombre>
-      <NombreLinks>
-        <PrincipalLink/>
-        <PorfolioLink/>
-      </NombreLinks>
-    </nav> 
-    <main> 
-      <RoutersInicio/>
-      <RoutersPorfolio/>
-    </main>
-  </>
+    <>
+      <Navnombre>
+        <Minombre> Zalo Aller </Minombre>
+        <NombreLinks>
+          <PrincipalLink />
+        </NombreLinks>
+      </Navnombre>
+    </>
   );
 };
 
