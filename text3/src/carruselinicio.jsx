@@ -22,6 +22,7 @@ const CarruselContenedor = styled.div`
   align-content: center;
   width: 100%;
   height: 100%;
+  border-radius: 20px;
 `;
 
 const Carruselinico = () => {

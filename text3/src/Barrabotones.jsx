@@ -3,29 +3,27 @@ import styled from "styled-components";
 import { PrincipalLink } from "./Link";
 
 const Navnombre = styled.nav`
-  background-color: salmon;
+  background-color: #d78c0e7a;
   display: flex;
-  justify-content: left;
-  align-content: left;
+  justify-content: space-around;
   width: 100%;
+  align-items: baseline;
+  margin: 2px;
+  border-radius: 20px;
 `;
 
-const Minombre = styled.p`
-  top: 0%;
-  left: 0%;
+const Minombre = styled.h1`
   justify-content: space-between;
   font-family: Vladimir Script;
-  align-items: start;
-  font-size: 36pt;
+  color: #04544df7;
+  font-size: 48pt;
 `;
 
-const NombreLinks = styled.div`
+const NombreLinks = styled.h2`
   justify-content: space-between;
-  top: 0%;
-  right: 0%;
   font-family: Kunstler Script;
-  align-items: start;
-  font-size: 24pt;
+  font-size: 36pt;
+  color: goldenrod;
 `;
 
 const Barrabotones = () => {

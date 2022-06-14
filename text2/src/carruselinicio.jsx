@@ -5,17 +5,15 @@ import conceptual from "./imagenes/Inicio/conceptual.jpg";
 import fauna from "./imagenes/Inicio/fauna.jpg";
 import styled from "styled-components";
 
-
 /**centrado, uno al lado del otro, con un poco de margen.*/
 const CarruselContenedor = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  width:100%;
+  width: 100%;
   height: 100%;
+  border-radius: 20px;
 `;
-
-
 
 const Carruselinico = () => {
   const images = [retrato, paisaje, fauna, conceptual];
@@ -37,34 +35,32 @@ const Carruselinico = () => {
   /** Creamos un método para simplificar. 2 parámetros, un selectedIndex que va a ser un número y dos una imagen es un strig.    Ponemos una propiedad sin parámetro. (next=true) que nos pregunta si vas al siguiente o al otro.*/
 
   const selectNewImage = (selectedIndex, images, next = true) => {
-    
-      /** En caso de ir adelante comprobamos next ? ( selectedIndex < images.lenth -1)
+    /** En caso de ir adelante comprobamos next ? ( selectedIndex < images.lenth -1)
  y si no (:)  unificamos las dos condiciones  */
-      const condition = next
-        ? selectedIndex < images.length - 1
-        : selectedIndex > 0;
+    const condition = next
+      ? selectedIndex < images.length - 1
+      : selectedIndex > 0;
 
-      /** ¿es next? ¿Se cumple la condición?  Hacemos la condición del sigiente index next.
+    /** ¿es next? ¿Se cumple la condición?  Hacemos la condición del sigiente index next.
          * y si no, ponemos la condición del previews (:)  si no, (:) ¿Se cumple la condición?  
          Es como escribir if(next){if(condition){return selectedIndex +1;}else{return 0}}*/
-      const nextIndex = next
-        ? condition
-          ? selectedIndex + 1
-          : 0
-        : condition
-        ? selectedIndex - 1
-        : images.length - 1;
+    const nextIndex = next
+      ? condition
+        ? selectedIndex + 1
+        : 0
+      : condition
+      ? selectedIndex - 1
+      : images.length - 1;
 
-      setSelectedImage(images[nextIndex]);
-      setSelectedIndex(nextIndex);
-      console.log(
-        "nextIndex , selectedIndex ,selectedImage",
-        selectedIndex,
-        nextIndex,
-        selectedImage,
-        setSelectedImage(images[nextIndex])
-      );
-   
+    setSelectedImage(images[nextIndex]);
+    setSelectedIndex(nextIndex);
+    console.log(
+      "nextIndex , selectedIndex ,selectedImage",
+      selectedIndex,
+      nextIndex,
+      selectedImage,
+      setSelectedImage(images[nextIndex])
+    );
   };
 
   /**  previous es directamente llamar a  selectNewImage () Pasarle selectedIndex,  
@@ -86,14 +82,12 @@ const Carruselinico = () => {
   /*console.log('images[0] : ',images[0])*/
   return (
     <>
-    <CarruselContenedor> 
+      <CarruselContenedor>
+        <img height="auto" width="90%" src={selectedImage} />
 
-      <img height="auto" width="90%" src={selectedImage} />
-
-      {ocultar && <button onClick={previous}> {"<"} </button>}
-      {ocultar && <button onClick={next}> {">"} </button>}
-
-    </CarruselContenedor>
+        {ocultar && <button onClick={previous}> {"<"} </button>}
+        {ocultar && <button onClick={next}> {">"} </button>}
+      </CarruselContenedor>
     </>
   );
 };
