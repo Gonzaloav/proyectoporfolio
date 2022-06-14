@@ -249,3 +249,7 @@ Instalaciones.-
 
 - Menu acordeon
   https://codepen.io/MrsColombo/pen/mEeQwy
+
+- cursos varios y de python
+    https://es.coursera.org/learn/interactive-python-1
+    https://es.coursera.org/
