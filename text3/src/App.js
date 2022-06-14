@@ -1,9 +1,9 @@
-import Barrabotones from "./Barrabotones";
+import VistaInicio from "./VistaInicio";
 
 function App() {
   return (
     <>
-      <Barrabotones />
+      <VistaInicio />
     </>
   );
 }
