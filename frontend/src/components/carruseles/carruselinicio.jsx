@@ -18,9 +18,14 @@ const CarruselContenedor = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
+  background-color: black;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  z-index: -1;
   width: 100%;
   height: 100%;
-  `;
+`;
 
 const Carruselinico = () => {
   const images = [retrato, paisaje, fauna, conceptual];
@@ -86,7 +91,7 @@ const Carruselinico = () => {
 
   return (
     <>
-      <CarruselContenedor>  
+      <CarruselContenedor>
         {ocultar && <button onClick={previous}> {"<"} </button>}
 
         <img height="auto" width="90%" src={selectedImage} />
