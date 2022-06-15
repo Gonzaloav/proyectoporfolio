@@ -1,6 +1,6 @@
 import React from "react";
 import Carruselinicio from "./carruselinicio";
-import Barrabotones from "./Barrabotones";
+import Barrabotones from "./Barrabotonesinicio";
 // import { RoutersInicio, RoutersPorfolio } from "./Routers";
 
 const VistaInicio = () => {
