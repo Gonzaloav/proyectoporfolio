@@ -2,12 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import { PrincipalLink } from "./Link";
 
+const HeaderbotonInico = styled.header`
+display: flex;
+margin-top: 55%;
+justify-content: center;
+`
+
 const Navnombre = styled.nav`
-  background-color: #d78c0efa;
+  background-color: #d78c0e52;
   display: flex;
   justify-content: space-around;
-  width: 99vw;
-  height: 8vh;
+  flex-direction: column;
+  width: 85vw;
+  height: 30vh;
   align-items: center;
   margin: 2px;
   border-radius: 20px;
