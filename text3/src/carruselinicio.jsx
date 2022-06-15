@@ -5,11 +5,11 @@ import conceptual from "./imagenes/Inicio/conceptual.jpg";
 import fauna from "./imagenes/Inicio/fauna.jpg";
 import styled from "styled-components";
 
-
 const CarruselContenedor = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
+  background-color: black;
   position: fixed;
   top: 0%;
   bottom: 0%;
@@ -35,8 +35,8 @@ const Carruselinico = () => {
     return () => clearInterval(interval);
   });
 
-  /** Creamos un método para simplificar. 2 parámetros, un selectedIndex que va a 
-   * ser un número y dos una imagen es un strig. Ponemos una propiedad sin parámetro. 
+  /** Creamos un método para simplificar. 2 parámetros, un selectedIndex que va a
+   * ser un número y dos una imagen es un strig. Ponemos una propiedad sin parámetro.
    * (next=true) que nos pregunta si vas al siguiente o al otro.*/
 
   const selectNewImage = (selectedIndex, images, next = true) => {
@@ -73,20 +73,18 @@ const Carruselinico = () => {
   const previous = () => {
     selectNewImage(selectedIndex, images, false);
     setOcultar(true);
-   
   };
 
   // no se pone false porque voy al siguiente.
   const next = () => {
     selectNewImage(selectedIndex, images);
     setOcultar(true);
-    
   };
 
   return (
     <>
       <CarruselContenedor>
-        <img height="auto" width="92%" src={selectedImage} alt= "paisaje" />
+        <img height="auto" width="92%" src={selectedImage} alt="paisaje" />
 
         {ocultar && <button onClick={previous}> {"<"} </button>}
         {ocultar && <button onClick={next}> {">"} </button>}
