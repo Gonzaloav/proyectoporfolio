@@ -1,9 +1,9 @@
-import VistaInicio from "./VistaInicio";
+import VistaContacto from "./Contacto/Vistacontacto";
 
 function App() {
   return (
     <>
-      <VistaInicio />
+      <VistaContacto />
     </>
   );
 }

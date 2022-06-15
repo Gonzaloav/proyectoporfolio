@@ -1,18 +1,18 @@
 import React from "react";
-
+import BarrabotonesPrinciapal from "../Barrabotonesprincipal";
+import Contacto from "./Contacto";
 
 const VistaContacto = () => {
-
   return (
     <>
-    <nav>
-        <Barrabotones/>
-    </nav>  
-    <main> 
-        
-    </main>
+      <nav>
+        <BarrabotonesPrinciapal />
+      </nav>
+      <main>
+        <Contacto />
+      </main>
     </>
   );
-}
+};
 
 export default VistaContacto;
