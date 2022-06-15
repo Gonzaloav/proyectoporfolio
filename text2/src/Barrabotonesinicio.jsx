@@ -3,11 +3,12 @@ import styled from "styled-components";
 import { PrincipalLink } from "./Link";
 
 const Navnombre = styled.nav`
-  background-color: #d78c0e7a;
+  background-color: #d78c0efa;
   display: flex;
   justify-content: space-around;
-  width: 100%;
-  align-items: baseline;
+  width: 99vw;
+  height: 8vh;
+  align-items: center;
   margin: 2px;
   border-radius: 20px;
 `;
