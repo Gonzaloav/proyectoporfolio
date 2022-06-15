@@ -1,20 +1,18 @@
 import React from "react";
 import Carruselinicio from "./carruselinicio";
 import Barrabotones from "./Barrabotonesinicio";
-// import { RoutersInicio, RoutersPorfolio } from "./Routers";
 
 const VistaInicio = () => {
-
   return (
     <>
-    <nav>
-        <Barrabotones/> 
-    </nav>  
-    <main> 
-        <Carruselinicio/>
-    </main>
+      <nav>
+        <Barrabotones />
+      </nav>
+      <main>
+        <Carruselinicio />
+      </main>
     </>
   );
-}
+};
 
 export default VistaInicio;
