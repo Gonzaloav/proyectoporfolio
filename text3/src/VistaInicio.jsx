@@ -1,12 +1,12 @@
 import React from "react";
-import Carruselinicio from "./carruselinicio";
-import Barrabotones from "./Barrabotonesinicio";
+import Carruselinicio from "./carruselinicio1";
+import BarrabotonesPrinciapal from "./Barrabotonesprincipal";
 
 const VistaInicio = () => {
   return (
     <>
       <nav>
-        <Barrabotones />
+        <BarrabotonesPrinciapal />
       </nav>
       <main>
         <Carruselinicio />

@@ -10,12 +10,9 @@ const CarruselContenedor = styled.div`
   justify-content: center;
   align-content: center;
   background-color: black;
-  position: fixed;
-  top: 0%;
-  bottom: 0%;
-  z-index: -1;
   width: 100%;
   height: 100%;
+  border-radius: 20px;
 `;
 
 const Carruselinico = () => {

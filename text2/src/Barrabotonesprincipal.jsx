@@ -5,17 +5,14 @@ import { PrincipalLink } from "./Link";
 const HeaderbotonInico = styled.header`
   position: fixed;
   right: 7%;
-  margin-top: 30%;
   justify-content: center;
 `;
-
 const Navnombre = styled.nav`
-  background-color: #d78c0e52;
+  background-color: #d78c0e;
   display: flex;
   justify-content: space-around;
-  flex-direction: column;
-  width: 85vw;
-  height: 30vh;
+  width: 98vw;
+  height: 8vh;
   align-items: center;
   margin: 2px;
   border-radius: 20px;
@@ -24,7 +21,7 @@ const Navnombre = styled.nav`
 const Minombre = styled.h1`
   justify-content: space-between;
   font-family: Vladimir Script;
-  color: #063a35;
+  color: #10625a;
   font-size: 48pt;
 `;
 
@@ -35,7 +32,7 @@ const NombreLinks = styled.h2`
   color: goldenrod;
 `;
 
-const Barrabotones = () => {
+const BarrabotonesPrinciapal = () => {
   return (
     <>
       <HeaderbotonInico>
@@ -50,4 +47,4 @@ const Barrabotones = () => {
   );
 };
 
-export default Barrabotones;
+export default BarrabotonesPrinciapal;
