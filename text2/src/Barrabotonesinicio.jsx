@@ -37,12 +37,14 @@ const NombreLinks = styled.h2`
 const Barrabotones = () => {
   return (
     <>
+    <HeaderbotonInico> 
       <Navnombre>
         <Minombre> Zalo Aller </Minombre>
         <NombreLinks>
           <PrincipalLink />
         </NombreLinks>
       </Navnombre>
+    </HeaderbotonInico>
     </>
   );
 };
