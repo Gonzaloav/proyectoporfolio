@@ -5,14 +5,13 @@ import conceptual from "./imagenes/Inicio/conceptual.jpg";
 import fauna from "./imagenes/Inicio/fauna.jpg";
 import styled from "styled-components";
 
-/**centrado, uno al lado del otro, con un poco de margen.*/
+
 const CarruselContenedor = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
   width: 100%;
   height: 100%;
-  border-radius: 20px;
 `;
 
 const Carruselinico = () => {
@@ -22,7 +21,7 @@ const Carruselinico = () => {
 
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
-  // Ocultar componente
+  // Ocultar componentes de botones
   const [ocultar, setOcultar] = useState(false);
 
   useEffect((props) => {
@@ -32,7 +31,9 @@ const Carruselinico = () => {
     return () => clearInterval(interval);
   });
 
-  /** Creamos un método para simplificar. 2 parámetros, un selectedIndex que va a ser un número y dos una imagen es un strig.    Ponemos una propiedad sin parámetro. (next=true) que nos pregunta si vas al siguiente o al otro.*/
+  /** Creamos un método para simplificar. 2 parámetros, un selectedIndex que va a 
+   * ser un número y dos una imagen es un strig. Ponemos una propiedad sin parámetro. 
+   * (next=true) que nos pregunta si vas al siguiente o al otro.*/
 
   const selectNewImage = (selectedIndex, images, next = true) => {
     /** En caso de ir adelante comprobamos next ? ( selectedIndex < images.lenth -1)
@@ -68,22 +69,20 @@ const Carruselinico = () => {
   const previous = () => {
     selectNewImage(selectedIndex, images, false);
     setOcultar(true);
-    /*console.log('images: ',images)*/
+   
   };
 
   // no se pone false porque voy al siguiente.
-
   const next = () => {
     selectNewImage(selectedIndex, images);
     setOcultar(true);
-    /*console.log('images: ',images)*/
+    
   };
 
-  /*console.log('images[0] : ',images[0])*/
   return (
     <>
       <CarruselContenedor>
-        <img height="auto" width="90%" src={selectedImage} />
+        <img height="auto" width="85%" src={selectedImage} alt= "paisaje" />
 
         {ocultar && <button onClick={previous}> {"<"} </button>}
         {ocultar && <button onClick={next}> {">"} </button>}
