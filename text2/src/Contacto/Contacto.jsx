@@ -5,7 +5,13 @@ import styled from "styled-components";
 const Generico = styled.body`  
  width: 100vw;
  height: 100vh;
- background-color: #8f8a8a;`;
+ background-color: #8f8a8a;
+ position: fixed;
+  top: 0%;
+  bottom: 0%;
+  z-index: -1;
+ z-index: -1;
+ `;
 
 const Formulario = styled.form`
   margin: 0 auto;
