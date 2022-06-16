@@ -1,17 +1,40 @@
 
 import React from "react";
+import styled from "styled-components";
+
+
+const Generico = styled.section`  
+ width: 100vw;
+ background-color: #8f8a8a;
+ position: fixed;
+ top: 5%; 
+ z-index: -1;
+ text-align: justify;
+ `;
 
 
 const Sobremi = () => {
 
   return (
     <>
-     <section>
+     <Generico>
             <article>
-                <h2> Mi Relación con la fotografía </h2>
-                        <p>
+                <h1> Mi Relación con la fotografía </h1>
+                <p> En mi opinión, el respeto por la naturaleza es algo que debe prevalecer sobre cualquier actividad que realicemos. Nuestra relación con ella debe ser sutil, 
+                            intuitiva, amable. Por ello entiendo que muchos de los códigos éticos que circulan en nuestros ámbitos fotográficos y conservacionistas abordan posiciones 
+                            evidentes y, desde luego, básicas. </p>
+
+                        <p> El respeto por la vida debe guiar nuestros pasos. Debemos ser sensitivos ante seres con los que compartimos el espacio vital y que tienen tanto derecho 
+                            como nosotros a ocuparlo. Desde luego que la ética es algo muy personal y debemos estar absolutamente convencidos de cuanto hacemos, nadie es quien para 
+                            decirnos lo que está bien o mal, especialmente en un mundo en el que el respeto por la naturaleza se ve continuamente vulnerado por intereses económicos. 
+                            Sin embargo, las posiciones personales son fundamentales para ser contrapuestas a aquellas que nos superan.</p>
                             
-                        </p>
+                        <p> Creo que nuestros posicionamientos éticos deben ser maduros, comprensivos, aunque firmes en nuestros propios actos. Somos parte de la naturaleza, una 
+                            especie más que interactúa a niveles de depredación, molestias, transformación del hábitat, etc, con las demás, sólo que nuestra percepción es mucho mayor 
+                            que la de otros seres vivos, así como nuestro poder tecnológico. Por ello debemos ser responsables de nuestros actos y velar por el mundo que nos rodea.</p>
+                            
+                        <p> La Asociación de Fotógrafos de Naturaleza (AEFONA), sintetiza en quince puntos un código ético que cuenta con el apoyo de entidades conservacionistas como 
+                            WWF, Greenpeace, SEO/BirdLife, CODA y APIA.</p>  
             </article>  
             <article>
                 <h2> Ética </h2>
@@ -79,7 +102,7 @@ const Sobremi = () => {
                         <p> 11-Estas son nuestras recomendaciones genéricas para nuestros asociados y la postura oficial de AEFONA ante las cuestiones éticas de nuestro trabajo en la 
                             naturaleza.</p>
             </article>
-        </section>
+        </Generico>
     
     </>
   );

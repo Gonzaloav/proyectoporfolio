@@ -1,4 +1,6 @@
 import React from "react";
+import BarrabotonesPrinciapal from "../Barrabotonesprincipal";
+import Sobremi from "./Sobremi";
 
 
 const VistaSobremi = () => {
@@ -6,10 +8,10 @@ const VistaSobremi = () => {
   return (
     <>
     <nav>
-        <Barrabotones/>
+        <BarrabotonesPrinciapal/>
     </nav>  
     <main> 
-        
+        <Sobremi/>
     </main>
     </>
   );

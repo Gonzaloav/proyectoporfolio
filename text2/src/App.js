@@ -1,11 +1,15 @@
 import React from 'react';
 import "./App.css"
-import VistaContacto from '../src/Contacto/Vistacontacto';
+import VistaContacto from './Contacto/Vistacontacto';
+import VistaInicio from './Inicio/VistaInicio';
+import VistaSobremi from './Sobremi/VistaSobremi';
 
 function App() {
   return (
     <>
         <VistaContacto/>
+        
+
     </>
   );
 }

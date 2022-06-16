@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import retrato from "./imagenes/Inicio/retrato.jpg";
-import paisaje from "./imagenes/Inicio/paisaje.jpg";
-import conceptual from "./imagenes/Inicio/conceptual.jpg";
-import fauna from "./imagenes/Inicio/fauna.jpg";
+import retrato from "../imagenes/Inicio/retrato.jpg";
+import paisaje from "../imagenes/Inicio/paisaje.jpg";
+import conceptual from "../imagenes/Inicio/conceptual.jpg";
+import fauna from "../imagenes/Inicio/fauna.jpg";
 import styled from "styled-components";
 
 const CarruselContenedor = styled.div`
