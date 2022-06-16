@@ -5,9 +5,9 @@ export const PrincipalLink = () => {
   return (
     <div >
         <nav>
-          <Link to="/"> Inicio </Link>
-          <Link to="/porfolio/"> Porfolio </Link>
-          <Link to="/sobremi/"> Sobre Mi</Link>
+          <Link to="/"> Inicio /</Link>
+          <Link to="/porfolio/"> Porfolio /</Link>
+          <Link to="/sobremi/"> Sobre Mi /</Link>
           <Link to="/contacto/"> Contacto </Link>
         </nav>
     </div>

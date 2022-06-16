@@ -1,41 +1,117 @@
-
 import React from "react";
+import styled from "styled-components";
 
 
+const Generico = styled.body`  
+ width: 100vw;
+ height: 100vh;
+ background-color: #8f8a8a;`;
+
+const Formulario = styled.form`
+  margin: 0 auto;
+  width: 600px;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+  margin-top: 1em;
+`;
+
+const Celda = styled.td`
+width: 260px;
+`;
+
+const Rectangulo = styled.input`
+  width: 250px;
+  position: fixed;
+`;
+
+const Texto = styled.textarea`
+  font: 1em sans-serif;
+  width: 300px;
+  box-sizing: border-box;
+  border-color: white;
+  height: 2em;
+`;
+
+const Boton = styled.button`
+  margin-left: 11em;
+`;
+
+const Contenedorcontac = styled.div`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: fixed;
+  right: 10%;
+  margin-top: 10%;
+  justify-content: space-between;
+`;
+
+const Palabra = styled.p`
+  font-family: Kunstler Script;
+  color: #063a35;
+  font-size: 36pt;
+`;
 const Contacto = () => {
-
   return (
     <>
-    <form>
-        <h2> Contacto</h2>
-
-        <form action="formulario contacto" method="get">
-            <ul>
-             <li>
-               <label for="name"> Tu Nombre:* </label>
-               <input type="text" id="name" name="user_name">
-             </li>
-             <li>
-                <label for="text"> Asunto: </label>
-                <input type="text" id="text" name="your-subject">
-            </li>
-            <li>
-               <label for="mail"> Tu E-mail:* </label>
-               <input type="email" id="mail" name="user_mail">
-             </li>
-             <li>
-               <label for="msg"> Tu Mensaje: </label>
-               <textarea id="msg" name="user_message"></textarea>
-             </li>
-             <li class="button">
-                <button type="submit">Envíe su mensaje</button>
-              </li>
-            </ul>
+    <Generico> 
+      <Contenedorcontac>
+        <form>
+          <h1> CONTACTO </h1>
+        <Formulario> 
+          <form action="formulario contacto" method="get">
+            <Palabra>
+              <tr>
+                <th>
+                  <label for="name"> Tu Nombre:* </label>
+                </th>
+                <th>
+                  <label for="text"> Asunto: </label>
+                </th>
+              </tr>
+              <tr>
+                <Celda>
+                 <Rectangulo type="text" id="name" name="user_name" /> 
+                </Celda>
+                <Celda>
+                  <Rectangulo type="text" id="text" name="your-subject" />
+                </Celda>
+              </tr>
+            </Palabra>
+            <Palabra>
+              <tr>
+                <th>
+                  <label for="mail"> Tu E-mail:* </label>
+                </th>
+                <th>
+                  <label for="msg"> Tu Mensaje: </label>
+                </th>
+              </tr>
+              <tr>
+                <Celda>
+                  <Rectangulo type="email" id="mail" name="user_mail" />
+                </Celda>
+                <Celda>
+                <Texto id="msg" name="user_message"/>
+                </Celda>
+              </tr>
+            </Palabra>
+            <tr>
+              <td>
+                <h3> * Campos obligatorios </h3>
+              </td>
+              <td>
+                <Boton type="submit">Envíe su mensaje</Boton>
+              </td>
+            </tr>
+          </form>
+        </Formulario>
         </form>
-    </form>
-    
-    </>
+      </Contenedorcontac>
+      </Generico>
+      </>
   );
-}
+};
 
 export default Contacto;

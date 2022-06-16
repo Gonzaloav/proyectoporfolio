@@ -1,11 +1,11 @@
 import React from 'react';
 import "./App.css"
-import VistaInicio from './VistaInicio.jsx';
+import VistaContacto from '../src/Contacto/Vistacontacto';
 
 function App() {
   return (
     <>
-        <VistaInicio/>
+        <VistaContacto/>
     </>
   );
 }

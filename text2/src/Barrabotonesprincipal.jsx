@@ -2,11 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { PrincipalLink } from "./Link";
 
-const HeaderbotonInico = styled.header`
-  position: fixed;
-  right: 7%;
-  justify-content: center;
-`;
 const Navnombre = styled.nav`
   background-color: #d78c0e;
   display: flex;
@@ -35,14 +30,14 @@ const NombreLinks = styled.h2`
 const BarrabotonesPrinciapal = () => {
   return (
     <>
-      <HeaderbotonInico>
+      
         <Navnombre>
           <Minombre> Zalo Aller </Minombre>
           <NombreLinks>
             <PrincipalLink />
           </NombreLinks>
         </Navnombre>
-      </HeaderbotonInico>
+      
     </>
   );
 };
