@@ -10,7 +10,6 @@ const Generico = styled.body`
   top: 0%;
   bottom: 0%;
   z-index: -1;
- z-index: -1;
  `;
 
 const Formulario = styled.form`
@@ -66,7 +65,7 @@ const Contacto = () => {
         <form>
           <h1> CONTACTO </h1>
         <Formulario> 
-          <form action="formulario contacto" method="get">
+          <form action="gonzaloav@protonmail.com" method="get">
             <Palabra>
               <tr>
                 <th>
@@ -121,3 +120,19 @@ const Contacto = () => {
 };
 
 export default Contacto;
+
+/** Enviar al backend. Api sendgrid. Correo con cierta seguridad. (Hotmail) 
+ No protonmail.
+ // using Twilio SendGrid's v3 Node.js Library
+// https://github.com/sendgrid/sendgrid-nodejs
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const msg = {
+  to: 'test@example.com',
+  from: 'test@example.com',
+  subject: 'Sending with Twilio SendGrid is Fun',
+  text: 'and easy to do anywhere, even with Node.js',
+  html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+};
+sgMail.send(msg); */
+ 
