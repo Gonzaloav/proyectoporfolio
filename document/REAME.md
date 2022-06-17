@@ -253,3 +253,11 @@ Instalaciones.-
 - cursos varios y de python
     https://es.coursera.org/learn/interactive-python-1
     https://es.coursera.org/
+
+-----------------------------------------
+ - Cómo usar EJS para crear una plantilla de su aplicación Node
+ https://www.digitalocean.com/community/tutorials/how-to-use-ejs-to-template-your-node-application-es
+
+ https://www.npmjs.com/package/ejs
+
+ 
