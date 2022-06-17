@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect } from "react";
+
 import FotosMiniatura from "./FotosMiniatura";
 
 const Miniaturas = (props) => {
@@ -21,28 +20,22 @@ const Miniaturas = (props) => {
         {name:"4.jpg",
         style: "Wrapper43"}
     ]
-    useEffect(()=>{
-    for (let i = 0; i < images34.length; i=i+3) {
-        const fila = [];
-        for ( let foto=0; foto< 3; foto++){
-        fila.push (images34[i+foto]);
+    const fotos=[]
+    for (let i = 0; i < images34.length; i=i+4) {
+        const fila = []
+        for ( let foto= 0; foto< 4; foto++){
+            if(images34.length>i+foto){
+            fila.push(images34[i+foto]);}
         }
-        console.log(fila)
-        
-    }},[])
-     /*for (let i = 0 ; i < fotos.length; i=i+2) {
-        let fila = []
-        console.log("fila");
-        for ( let j=0 ; j < 2; j++) {
-            fila.push(fotos[i+j]);
-        }
-        console.log("componente", fila);*/
-    
+        fotos.push(fila)
+    }
      return (
-    <> 
-{/*     
-        <FotosMiniatura images={images34}/> */}
-        <p>hola</p>
+    <>    
+    <ul className="container">{fotos.map(
+        (item)=>
+        <FotosMiniatura images={item}/> 
+        
+    )}</ul> 
     </>
     );
   };

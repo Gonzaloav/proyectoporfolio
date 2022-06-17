@@ -1,13 +1,12 @@
 import React from 'react';
 import "./App.css"
-import VistaContacto from './Contacto/Vistacontacto';
-import VistaInicio from './Inicio/VistaInicio';
+import Miniaturas from './Miniaturas';
 import VistaSobremi from './Sobremi/VistaSobremi';
 
 function App() {
   return (
     <>
-        <VistaContacto/>
+        <Miniaturas/>
         
 
     </>

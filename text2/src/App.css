@@ -7,9 +7,12 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
+}
+.container2{
+  display: flex;
   flex-direction: row;
 }
-
 .wrapper {
   margin: 2px;
 }
