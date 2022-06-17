@@ -10,6 +10,15 @@ const General = styled.section`
   background-color: #b5b0b0;
 `;
 
+/**width: 96vw;
+ background-color: #8f8a8a;
+ left:2%;
+ rigth: 2%;
+ top: 5%; 
+ z-index: -1;
+ text-align: justify;
+ `; */
+
 const Sobremi = () => {
   return (
     <>
