@@ -260,4 +260,11 @@ Instalaciones.-
 
  https://www.npmjs.com/package/ejs
 
- 
+ ---------------------------------------------
+  - Documentacion   MONGO base datos
+  https://www.mongodb.com/docs/drivers/node/current/
+
+  https://www.mongodb.com/docs/drivers/node/current/usage-examples/
+
+  https://www.mongodb.com/docs/drivers/node/current/fundamentals/crud/
+  
