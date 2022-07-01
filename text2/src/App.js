@@ -1,13 +1,13 @@
 import React from 'react';
 import "./App.css"
-import Miniaturas from './Miniaturas';
-import VistaSobremi from './Sobremi/VistaSobremi';
+import CarruselFotoAmpliada from '../src/CarruselFotoAmpliada';
+
 
 function App() {
   return (
     <>
-        <Miniaturas/>
-        
+        <CarruselFotoAmpliada/>
+    
 
     </>
   );

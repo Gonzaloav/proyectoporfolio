@@ -1,7 +1,7 @@
 import React from "react";
 import Carruselinicio from "./carruselinicio";
 import Barrabotones from "./Barrabotonesinicio";
-
+import CarruselFotoAmpliada from "./CarruselFotoAmpliada";
 const VistaInicio = () => {
 
   return (
@@ -10,7 +10,7 @@ const VistaInicio = () => {
         <Barrabotones/>
     </nav>  
     <main> 
-        <Carruselinicio/>
+        <CarruselFotoAmpliada/>
     </main>
     </>
   );
